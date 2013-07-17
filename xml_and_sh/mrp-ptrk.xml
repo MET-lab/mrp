@@ -1,0 +1,153 @@
+<?xml version="1.0" standalone="yes"?>
+<PatchTableRoot>
+  <Patch name="basic" class="MidiNote">
+    <Synth class="PllSynth">
+      <Parameter name="HarmonicAmplitudes" value="0,.5,.3,.2,.1,.1,.1,.08,.08,.08,.06,.06,.06,.05,.05,.05"/>
+    </Synth>
+  </Patch>
+  <Patch name="basic2" class="MidiNote">
+    <Synth class="PllSynth">
+      <Parameter name="LoopGain" value="100000"/>
+      <Parameter name="UseInterferenceRejection" value="true"/>
+      <Parameter name="UseAmplitudeFeedback" value="false"/>
+      <Parameter name="GlobalAmplitude" value="-40db/-20dB"/>
+      <Parameter name="AmplitudeFeedbackScaler" value="20"/>
+    </Synth>
+  </Patch>
+  <Patch name="basic2-cresc" class="MidiNote">
+    <Synth class="PllSynth">
+      <Parameter name="LoopGain" value="100000"/>
+      <Parameter name="UseInterferenceRejection" value="true"/>
+      <Parameter name="UseAmplitudeFeedback" value="false"/>
+      <Parameter name="GlobalAmplitude" value="-60dB">
+        <Ramp value="-30dB/-20db" duration="2" type="log"/>
+      </Parameter>
+      <Parameter name="AmplitudeFeedbackScaler" value="20"/>
+    </Synth>
+  </Patch>
+  <Patch name="test1" class="MidiNote">
+    <Synth class="PllSynth">
+      <Parameter name="FilterQ" value="50"/>
+      <Parameter name="LoopFilterPole" value="1"/>
+      <Parameter name="LoopFilterZero" value="100"/>
+      <Parameter name="UseInterferenceRejection" value="false"/>
+      <Parameter name="RelativeFrequency" value="1">
+        <Ramp value="8" duration="2" type="logarithmic"/>
+      </Parameter>
+      <Parameter name="GlobalAmplitude" value=".1">
+        <Ramp value="1" duration=".1" type="linear"/>
+        <Ramp value=".1" duration="4" type="linear"/>
+      </Parameter>
+      <Parameter name="HarmonicAmplitudes" value="1,.5,.33,.25">
+        <Ramp value=".5,.25,.16,.125" duration="1" type="linear"/>
+        <Ramp value="1,0,0,0" duration="4" type="logarithmic"/>
+      </Parameter>
+      <Parameter name="HarmonicPhases" value="0"/>
+      <Parameter name="InputGains" value="1"/>
+      <Parameter name="InputDelays" value="0"/>
+      <Parameter name="LoopGain" value="10000"/>
+      <Parameter name="AmplitudeFeedbackScaler" value="4"/>
+      <Parameter name="UseAmplitudeFeedback" value="true"/>
+    </Synth>
+  </Patch>
+  <Patch name="test2" class="MidiNote">
+    <Synth class="PllSynth">
+      <Parameter name="LoopGain" value="100000"/>
+      <Parameter name="RelativeFrequency" value="1">
+        <Ramp value="4/8" duration="2" type="log"/>
+      </Parameter>
+      <Parameter name="UseInterferenceRejection" value="true"/>
+      <Parameter name="GlobalAmplitude" value="-20db/0db" concavity="1"/>
+      <Parameter name="HarmonicAmplitudes" value="1,0,0,0,0,0,0,0" concavity="0">
+        <Ramp value="1,0/1,0/.5,0/.4,0/.3,0/.2,0/.1,0/.1" duration="3/.5" type="log"/>
+      </Parameter>
+    </Synth>
+    <Synth class="PllSynth"/>
+  </Patch>
+  <Patch name="noise" class="MidiNote">
+    <Synth class="NoiseSynth">
+      <Parameter name="GlobalAmplitude" value="-40db/0db" concavity="5"/>
+      <Parameter name="FilterAmplitudes" value="1"/>
+      <Parameter name="RelativeFrequencies" value="1">
+        <Ramp value="8" duration="3" type="log"/>
+      </Parameter>
+      <Parameter name="FilterQs" value="500"/>
+    </Synth>
+  </Patch>
+  <Patch name="mvt1" class="MidiNote">
+    <Synth class="PllSynth">
+      <Parameter name="LoopGain" value="100000"/>
+      <Parameter name="RelativeFrequency" value="1"/>
+      <Parameter name="UseInterferenceRejection" value="true"/>
+      <Parameter name="GlobalAmplitude" value="-20db" concavity="1"/>
+      <Parameter name="HarmonicAmplitudes" value="1,0,0,0,0,0,0,0" concavity="0">
+        <Ramp value="1,1,0,0,0,0,0,0" duration="1" type="log"/>
+        <Ramp value="0,1,1,0,0,0,0,0" duration="1" type="log"/>
+        <Ramp value="0,.1,.5,1,0,0,0,0" duration="1" type="log"/>
+        <Ramp value="0,0,0,1,0,1,0,0" duration="1" type="log"/>
+        <Ramp value="0,0,0,0,0,0,0,1" duration="1" type="log"/>
+      </Parameter>
+    </Synth>
+  </Patch>
+  <Patch name="mvt4" class="MidiNote">
+    <Synth class="PllSynth">
+      <Parameter name="LoopGain" value="100000"/>
+      <Parameter name="UseInterferenceRejection" value="true"/>
+      <Parameter name="UseAmplitudeFeedback" value="true"/>
+      <Parameter name="GlobalAmplitude" value="-40dB">
+        <Ramp value="-10dB" duration="1" type="log"/>
+      </Parameter>
+      <Parameter name="AmplitudeFeedbackScaler" value="20"/>
+    </Synth>
+  </Patch>
+  <Patch name="calibrate" class="CalibratorNote">
+    <Parameter name="GlobalAmplitude" value="-26dB"/>
+    <Control name="phaseOffset" id="10" channel="1"/>
+    <Control name="amplitudeOffset" id="11" channel="1"/>
+  </Patch>
+  <Patch name="basic-ptrk" class="PitchTrackNote">
+    <Synth class="PitchTrackSynth">
+      <Parameter name="MaxGlobalAmplitude" value="1"/>
+      <Parameter name="MaxDuration" value="20"/>
+      <Parameter name="DecayTimeConstant" value="2"/>
+      <Parameter name="InputRelativeFrequency" value="1"/>
+      <Parameter name="OutputRelativeFrequency" value="1"/>
+      <Parameter name="PitchFollowRange" value="1.05"/>
+      <Parameter name="PitchFollowRatio" value="0"/>
+      <Parameter name="InputGain" value="10"/>
+      <Parameter name="HarmonicAmplitudes" value="1,.5,.3,.2,.1,.05,.03,.02"/>
+    </Synth>
+  </Patch>
+
+  <PatchTable>
+    <Program id="+">
+      <PitchTrack>
+        <Patch>basic-ptrk</Patch>
+        <Range>48,52,55,59,62,65,69,72,76,79,83</Range>
+        <!-- <Coupling>7</Coupling> -->
+        <Priority>0</Priority>
+        <OnceOnly>false</OnceOnly>
+      </PitchTrack>
+    </Program>
+    <Program id="+">
+      <PitchTrack>
+         <Patch>basic-ptrk</Patch>
+         <Range>48,51,55,58,62,65,68,72,75,79,83</Range>
+         <NotesOff>all</NotesOff>
+      </PitchTrack>
+    </Program>
+  </PatchTable>
+
+  <StringMap>
+    <Map note="84-95" string="72-83"/>
+    <Map note="96-107" string="72-83"/>
+    <Map note="93-95" string="75-77"/>
+  </StringMap>
+
+  <PitchTrackSettings>
+    <TriggerTotalSamples>4</TriggerTotalSamples>
+    <TriggerPositiveSamples>3</TriggerPositiveSamples>
+    <PitchTolerance>0.7</PitchTolerance>
+    <AmplitudeThreshold>0.01</AmplitudeThreshold>
+  </PitchTrackSettings>
+</PatchTableRoot>

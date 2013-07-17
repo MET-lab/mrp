@@ -1,0 +1,905 @@
+<?xml version="1.0" standalone="yes"?>
+<PatchTableRoot>
+  <!-- calibration -->
+  <Patch name="calibrate" class="CalibratorNote">
+    <Parameter name="GlobalAmplitude" value="-26dB"/>
+    <Control name="phaseOffset" id="10" channel="1"/>		<!-- for MK361 USB -->
+    <Control name="amplitudeOffset" id="11" channel="1"/>
+  </Patch>
+    
+  <!-- movement I -->
+  <Patch name="mvt1-1" class="MidiNote">
+    <VelocityCurve>2</VelocityCurve>
+    <Synth class="PllSynth">
+	  <Parameter name="LoopGain" value="100000"/>
+      <Parameter name="UseInterferenceRejection" value="true"/>	  
+      <Parameter name="GlobalAmplitude" value="-40dB/-15dB"/>
+      <Parameter name="HarmonicAmplitudes" value="1"/>
+    </Synth>
+  </Patch>
+  <Patch name="mvt1-1-boost" class="MidiNote">
+    <VelocityCurve>1</VelocityCurve>
+    <Synth class="PllSynth">
+	  <Parameter name="LoopGain" value="0"/>
+      <Parameter name="GlobalAmplitude" value="-15db/-5db"/>
+      <Parameter name="HarmonicAmplitudes" value="1"/>
+    </Synth>
+  </Patch>  
+  <Patch name="mvt1-1-crescendo" class="MidiNote">
+    <Synth class="PllSynth">
+      <Parameter name="LoopGain" value="100000"/>
+      <Parameter name="UseInterferenceRejection" value="true"/>
+      <Parameter name="UseAmplitudeFeedback" value="false"/>
+      <Parameter name="GlobalAmplitude" value="-60dB">
+        <Ramp value="-30dB/-15db" duration="2" type="log"/>
+      </Parameter>
+    </Synth>
+  </Patch>
+  <Patch name="mvt1-1-piano" class="MidiNote">
+    <VelocityCurve>2</VelocityCurve>
+    <Synth class="PllSynth">
+	  <Parameter name="LoopGain" value="100000"/>
+      <Parameter name="UseInterferenceRejection" value="true"/>	  
+      <Parameter name="GlobalAmplitude" value="-25dB/-25dB"/>
+      <Parameter name="HarmonicAmplitudes" value="1"/>
+    </Synth>
+  </Patch>  
+  <Patch name="mvt1-2" class="MidiNote">
+    <VelocityCurve>2</VelocityCurve>
+    <Synth class="PllSynth">
+	  <Parameter name="LoopGain" value="0"/> 	  
+      <Parameter name="GlobalAmplitude" value="-30dB/-15dB"/>
+	  <Parameter name="RelativeFrequency" value="2"/>
+      <Parameter name="HarmonicAmplitudes" value=".2,.5,.3,.2,.1,.1,.1,.08"/>
+    </Synth>
+  </Patch>  
+  <Patch name="mvt1-3" class="MidiNote">
+    <VelocityCurve>2</VelocityCurve>
+    <Synth class="PllSynth">
+	  <Parameter name="LoopGain" value="100000"/>
+      <Parameter name="UseInterferenceRejection" value="true"/>	  	  
+      <Parameter name="GlobalAmplitude" value="-25dB/-15dB"/>
+      <Parameter name="HarmonicAmplitudes" value=".2,.5,.3,.2,.1,.1,.1,.08,.08,.08,.06,.06,.06,.05,.05,.05"/>
+    </Synth>
+  </Patch>    
+  
+  <!-- movement II -->
+  <Patch name="mvt2-1" class="MidiNote">
+    <Synth class="PllSynth">
+	  <Parameter name="LoopGain" value="100000"/>
+      <Parameter name="GlobalAmplitude" value="-25db"/>
+      <Parameter name="HarmonicAmplitudes" value="1"/>
+      <Parameter name="RelativeFrequency" value="1">
+        <Ramp value="2" duration="1" type="step"/>
+        <Ramp value="3" duration=".25" type="step"/>
+        <Ramp value="4" duration=".25" type="step"/>
+        <Ramp value="5" duration=".25" type="step"/>
+        <Ramp value="6" duration=".25" type="step"/>
+        <Ramp value="7" duration=".25" type="step"/>
+        <Ramp value="8" duration=".25" type="step"/>
+      </Parameter>
+    </Synth>  
+    <Synth class="PllSynth">
+	  <Parameter name="LoopGain" value="0"/>
+      <Parameter name="GlobalAmplitude" value="-40db">
+	    <Ramp value="-20db" duration="1" type="step"/>
+	  </Parameter>
+      <Parameter name="HarmonicAmplitudes" value="1"/>
+      <Parameter name="RelativeFrequency" value="1">
+        <Ramp value="2" duration="1" type="step"/>
+        <Ramp value="3" duration=".5" type="step"/>
+        <Ramp value="4" duration=".5" type="step"/>
+        <Ramp value="5" duration=".25" type="step"/>
+        <Ramp value="6" duration=".2" type="step"/>
+        <Ramp value="7" duration=".15" type="step"/>
+        <Ramp value="8" duration=".1" type="step"/>
+      </Parameter>
+    </Synth>
+  </Patch>
+  
+  <!-- movement III -->
+  <Patch name="mvt3-piano-1" class="MidiNote">
+    <Synth class="PllSynth">
+	  <Parameter name="LoopGain" value="100000"/>
+      <Parameter name="UseInterferenceRejection" value="true"/>	 	  
+      <Parameter name="GlobalAmplitude" value="-22db"/>
+      <Parameter name="HarmonicAmplitudes" value="1"/>
+    </Synth>
+  </Patch>  
+  <Patch name="mvt3-aux-1" class="MidiNote">
+    <Synth class="PllSynth">
+	  <Parameter name="LoopGain" value="0"/>
+      <Parameter name="GlobalAmplitude" value="-12db">
+       <!-- <Ramp value="-20db" duration=".2" type="log"/>
+        <Ramp value="-5" duration=".3" type="log"/>-->
+      </Parameter>
+      <Parameter name="HarmonicAmplitudes" value="1,.5,.25,.1"/>
+      <Parameter name="UseAmplitudeFeedback" value="false"/>		
+      <Parameter name="RelativeFrequency" value="1">
+        <Ramp value="2" duration=".3" type="step"/>
+        <Ramp value="3" duration=".2" type="step"/>
+        <Ramp value="4" duration=".1" type="step"/>
+      </Parameter>
+      <Parameter name="AmplitudeFeedbackScaler" value="5"/>	  
+    </Synth>
+  </Patch>  
+  <Patch name="mvt3-piano-2" class="MidiNote">
+    <Synth class="PllSynth">
+	  <Parameter name="LoopGain" value="100000"/>
+      <Parameter name="UseInterferenceRejection" value="true"/>	 	  
+      <Parameter name="GlobalAmplitude" value="-12db"/>
+      <Parameter name="HarmonicAmplitudes" value=".2,.5,.3,.2,.1,.1,.1,.08,.08,.08,.06,.06,.06,.05,.05,.05"/>
+    </Synth>
+  </Patch>    
+  <Patch name="mvt3-aux-2" class="MidiNote">
+    <VelocityCurve>2</VelocityCurve>
+    <Synth class="PllSynth">
+	  <Parameter name="LoopGain" value="0"/>  
+      <Parameter name="GlobalAmplitude" value="-22db"/>
+      <Parameter name="HarmonicAmplitudes" value="1"/>
+    </Synth>
+  </Patch>  
+  
+  <!-- movement IV -->
+  <Patch name="mvt4-sostenuto" class="MidiNote">
+    <Synth class="PllSynth">
+	  <Parameter name="LoopGain" value="100000"/>
+      <Parameter name="UseInterferenceRejection" value="true"/>	 	  
+      <Parameter name="GlobalAmplitude" value="-18db"/>
+      <Parameter name="HarmonicAmplitudes" value="1,.2,.1,.05,.03,.02,.01,.01"/>
+    </Synth>
+  </Patch>  
+  <Patch name="mvt4-piano-cresc-1" class="MidiNote">
+    <Synth class="PllSynth">
+      <Parameter name="LoopGain" value="0"/>
+      <Parameter name="UseInterferenceRejection" value="true"/>
+      <Parameter name="UseAmplitudeFeedback" value="false"/>
+      <Parameter name="GlobalAmplitude" value="-35dB">	<!-- was -50dB -->
+        <Ramp value="-15db" duration="0.8" type="log"/>	<!-- was 1 -->
+      </Parameter>
+	  <Parameter name="HarmonicAmplitudes" value="1,.5,.3,0,.5,.3,.2,.1"/>
+      <Parameter name="AmplitudeFeedbackScaler" value="20"/>
+    </Synth>
+  </Patch>  
+  <Patch name="mvt4-piano-cresc-2" class="MidiNote">
+    <Synth class="PllSynth">
+      <Parameter name="LoopGain" value="0"/>
+      <Parameter name="UseInterferenceRejection" value="true"/>
+      <Parameter name="UseAmplitudeFeedback" value="false"/>
+      <Parameter name="GlobalAmplitude" value="-35dB">	<!-- was -50dB -->
+        <Ramp value="-12db" duration="0.75" type="log"/> <!-- was 0.75 -->
+      </Parameter>
+	  <Parameter name="HarmonicAmplitudes" value="1,0,0,.5"/>
+      <Parameter name="AmplitudeFeedbackScaler" value="20"/>
+    </Synth>
+  </Patch>    
+  <Patch name="mvt4-piano-noncresc-1" class="MidiNote">
+    <Synth class="PllSynth">
+      <Parameter name="LoopGain" value="100000"/>
+      <Parameter name="UseInterferenceRejection" value="true"/>
+      <Parameter name="UseAmplitudeFeedback" value="true"/>
+      <Parameter name="GlobalAmplitude" value="-22dB"/>
+	  <Parameter name="HarmonicAmplitudes" value="1,0,0,.5"/>
+      <Parameter name="AmplitudeFeedbackScaler" value="20"/>
+    </Synth>
+  </Patch>    
+  <Patch name="mvt4-piano-noncresc-2" class="MidiNote">
+    <Synth class="PllSynth">
+      <Parameter name="LoopGain" value="100000"/>
+      <Parameter name="UseInterferenceRejection" value="true"/>
+      <Parameter name="UseAmplitudeFeedback" value="false"/>
+      <Parameter name="GlobalAmplitude" value="-22dB"/>
+	  <Parameter name="HarmonicAmplitudes" value=".5,1,0,.5,.4,.3,.2,.1,.05,.05"/>
+      <Parameter name="AmplitudeFeedbackScaler" value="20"/>
+    </Synth>
+  </Patch>    
+  <Patch name="mvt4-aux-1" class="MidiNote">
+    <Synth class="PllSynth">
+      <Parameter name="LoopGain" value="0"/>
+      <Parameter name="UseInterferenceRejection" value="true"/>
+      <Parameter name="UseAmplitudeFeedback" value="false"/>
+      <Parameter name="GlobalAmplitude" value="-20db/-15db">
+	    <Ramp value="-30db/-30db" duration="2" type="log"/>
+	  </Parameter>
+	  <Parameter name="HarmonicAmplitudes" value="0,0,0,0,0,0,0,1">
+	    <Ramp value="0,0,0,1,0,0,0,1" duration=".5" type="log"/>
+		<Ramp value="0,1,0,1,0,0,0,1" duration=".5" type="log"/>
+		<Ramp value="1,1,0,1,0,0,0,0" duration="1" type="log"/>
+	  </Parameter>
+      <Parameter name="AmplitudeFeedbackScaler" value="10"/>
+    </Synth>
+  </Patch>  
+  
+  <!-- movement V -->
+  <Patch name="mvt5-1" class="MidiNote">
+    <Synth class="PllSynth">
+      <Parameter name="LoopGain" value="100000"/>
+      <Parameter name="UseInterferenceRejection" value="true"/>
+      <Parameter name="UseAmplitudeFeedback" value="false"/>
+      <Parameter name="GlobalAmplitude" value="-22dB"/>
+	  <Parameter name="HarmonicAmplitudes" value="0,1,1,0,1,0,.2,0,.1,0,.05"/>
+    </Synth>
+  </Patch>   
+  <Patch name="mvt5-1-boost" class="MidiNote">
+    <Synth class="PllSynth">
+      <Parameter name="LoopGain" value="100000"/>
+      <Parameter name="UseInterferenceRejection" value="true"/>
+      <Parameter name="UseAmplitudeFeedback" value="false"/>
+      <Parameter name="GlobalAmplitude" value="-12dB"/>
+	  <Parameter name="HarmonicAmplitudes" value=".25,1,1,0,1,0,.2,0,.1,0,.05"/>
+    </Synth>
+  </Patch>   
+  <!--<Patch name="mvt5-2" class="MidiNote">
+    <Synth class="NoiseSynth">
+      <Parameter name="GlobalAmplitude" value="-15db"/>
+      <Parameter name="FilterAmplitudes" value="1,1"/>
+      <Parameter name="RelativeFrequencies" value="4,2">
+        <Ramp value="4,32" duration="1" type="log"/>
+		<Ramp value="4,8" duration=".75" type="log"/>
+      </Parameter>
+      <Parameter name="FilterQs" value="20,50"/>	  
+    </Synth>
+  </Patch>-->
+  <Patch name="mvt5-2" class="MidiNote">
+    <Synth class="PllSynth">
+      <Parameter name="GlobalAmplitude" value="-15db"/>
+      <Parameter name="RelativeFrequency" value="2">
+        <Ramp value="4" duration=".2" type="step"/>
+        <Ramp value="6" duration=".2" type="step"/>
+        <Ramp value="8" duration=".2" type="step"/>
+        <Ramp value="10" duration=".2" type="step"/>
+        <Ramp value="12" duration=".2" type="step"/>
+        <Ramp value="14" duration=".2" type="step"/>
+        <Ramp value="16" duration=".2" type="step"/>
+      </Parameter>
+    </Synth>
+  </Patch>  
+  <!--<Patch name="mvt5-3" class="MidiNote">
+    <Synth class="NoiseSynth">
+      <Parameter name="GlobalAmplitude" value="-15db"/>
+	  <Parameter name="RelativeFrequencies" value="1"/>
+	  <Parameter name="FilterAmplitues" value="0db"/>
+	  <Parameter name="FilterQs" value="100"/>
+    </Synth>
+  </Patch> -->  
+  <Patch name="mvt5-3" class="MidiNote">
+    <Synth class="PllSynth">
+      <Parameter name="LoopGain" value="100000"/>
+      <Parameter name="UseInterferenceRejection" value="true"/>
+      <Parameter name="UseAmplitudeFeedback" value="false"/>
+	  <Parameter name="RelativeFrequency" value="2"/>
+      <Parameter name="GlobalAmplitude" value="-20dB"/>
+	  <Parameter name="HarmonicAmplitudes" value="1"/>
+    </Synth>
+  </Patch>     
+
+  <!-- movement VI -->
+  <Patch name="mvt6-1" class="ResonanceNote">
+    <Synth class="ResonanceSynth">
+      <Parameter name="GlobalAmplitude" value="-15dB"/>
+      <Parameter name="Rolloff" value="1.8"/>
+      <Parameter name="DecayRate" value="0.08"/>
+      <Parameter name="Mono" value="true"/>
+    </Synth>
+  </Patch>
+  
+  <!-- movement VII -->
+  <Patch name="mvt7-cresc-1" class="MidiNote">
+    <Synth class="PllSynth">
+	  <Parameter name="LoopGain" value="100000"/>
+      <Parameter name="UseInterferenceRejection" value="true"/>	 	  
+      <Parameter name="GlobalAmplitude" value="-40db">
+	    <Ramp value="-15db" duration="1" type="log"/>
+	  </Parameter>
+      <Parameter name="HarmonicAmplitudes" value="1,.5"/>
+    </Synth>
+  </Patch>  
+  <Patch name="mvt7-noncresc-1" class="MidiNote">
+    <Synth class="PllSynth">
+	  <Parameter name="LoopGain" value="100000"/>
+      <Parameter name="UseInterferenceRejection" value="true"/>	 	  
+      <Parameter name="GlobalAmplitude" value="-15db"/>
+      <Parameter name="HarmonicAmplitudes" value="1"/>
+    </Synth>
+  </Patch>  
+  <Patch name="mvt7-noncresc-2" class="MidiNote">
+    <Synth class="PllSynth">
+	  <Parameter name="LoopGain" value="100000"/>
+      <Parameter name="UseInterferenceRejection" value="true"/>	  
+      <Parameter name="GlobalAmplitude" value="-12db"/>
+      <Parameter name="HarmonicAmplitudes" value=".3,1,0,0,1"/>
+    </Synth>
+  </Patch>       
+  <Patch name="mvt7-sweep-1" class="MidiNote">
+    <Synth class="PllSynth">
+	  <Parameter name="LoopGain" value="0"/>
+      <Parameter name="UseInterferenceRejection" value="true"/>	 	  
+      <Parameter name="GlobalAmplitude" value="-10db"/>
+      <Parameter name="RelativeFrequency" value="1">
+	    <Ramp value="2" duration=".25" type="step"/>
+		<Ramp value="4" duration=".25" type="step"/>
+	  </Parameter>
+    </Synth>
+  </Patch>             
+  
+  <!-- movement IX -->
+  <Patch name="mvt9-aux-1" class="MidiNote">
+    <VelocityCurve>1</VelocityCurve>
+    <Synth class="PllSynth">
+	  <Parameter name="LoopGain" value="100000"/>
+      <Parameter name="UseInterferenceRejection" value="true"/>	  
+      <Parameter name="GlobalAmplitude" value="-30dB/-10dB"/>
+      <Parameter name="HarmonicAmplitudes" value="1"/>
+    </Synth>
+  </Patch>
+  <Patch name="mvt9-piano-harmonic-1" class="MidiNote">
+    <Synth class="PllSynth">
+	  <Parameter name="LoopGain" value="0"/>
+      <Parameter name="UseInterferenceRejection" value="true"/>	  
+      <Parameter name="GlobalAmplitude" value="-20db"/>
+      <Parameter name="HarmonicAmplitudes" value="0,.2,0,1"/>
+    </Synth>
+  </Patch>   
+  <Patch name="mvt9-aux-2" class="MidiNote">
+    <VelocityCurve>1</VelocityCurve>
+    <Synth class="PllSynth">
+	  <Parameter name="LoopGain" value="0"/>
+      <Parameter name="UseInterferenceRejection" value="true"/>	  
+      <Parameter name="GlobalAmplitude" value="-25db/-10db"/>
+      <Parameter name="HarmonicAmplitudes" value=".3,1,1,0,1"/>
+    </Synth>
+  </Patch>  
+  <Patch name="mvt9-aux-2-boost" class="MidiNote">
+    <VelocityCurve>1</VelocityCurve>
+    <Synth class="PllSynth">
+	  <Parameter name="LoopGain" value="0"/>
+      <Parameter name="UseInterferenceRejection" value="true"/>	  
+      <Parameter name="GlobalAmplitude" value="-10db"/>
+      <Parameter name="HarmonicAmplitudes" value=".7,0,1,1,1"/>
+    </Synth>
+  </Patch>    
+  <Patch name="mvt9-piano-1" class="MidiNote">
+    <Synth class="PllSynth">
+	  <Parameter name="LoopGain" value="0"/>
+      <Parameter name="UseInterferenceRejection" value="true"/>	  
+      <Parameter name="GlobalAmplitude" value="-15db"/>
+      <Parameter name="HarmonicAmplitudes" value=".3,1,1,0,1"/>
+    </Synth>
+  </Patch>   
+  <Patch name="mvt9-piano-1-soft" class="MidiNote">
+    <Synth class="PllSynth">
+	  <Parameter name="LoopGain" value="0"/>
+      <Parameter name="UseInterferenceRejection" value="true"/>	  
+      <Parameter name="GlobalAmplitude" value="-20db"/>
+      <Parameter name="HarmonicAmplitudes" value=".3,1,1,0,1"/>
+    </Synth>
+  </Patch>   
+  <Patch name="mvt9-piano-2" class="MidiNote">
+    <Synth class="PllSynth">
+	  <Parameter name="LoopGain" value="0"/>
+      <Parameter name="UseInterferenceRejection" value="true"/>	  
+      <Parameter name="GlobalAmplitude" value="-20db"/>
+      <Parameter name="HarmonicAmplitudes" value="1,.2,0,.2"/>
+    </Synth>
+  </Patch>    
+  <Patch name="mvt9-piano-3" class="MidiNote">
+    <Synth class="PllSynth">
+	  <Parameter name="LoopGain" value="0"/>
+      <Parameter name="UseInterferenceRejection" value="true"/>	  
+      <Parameter name="GlobalAmplitude" value="-22db"/>
+      <Parameter name="HarmonicAmplitudes" value="1"/>
+    </Synth>
+  </Patch>     
+    
+  
+   
+
+  <PatchTable>
+    <Program id="+">		<!-- movement I -->
+	  <Channel id="0">
+        <Patch>mvt1-1-piano</Patch>
+		<UseDamperPedal>false</UseDamperPedal>	
+	  </Channel>
+      <Channel id="1" velocitySplitPoint="16">	<!-- was 16 -->
+        <Patch velocity="high">mvt1-1</Patch>
+        <Patch velocity="low">mvt1-1-crescendo</Patch>
+		<Range>0-83</Range>
+		<UseDamperPedal>false</UseDamperPedal>
+      </Channel>
+      <Channel id="1" velocitySplitPoint="16">
+        <Patch velocity="high">mvt1-1-boost</Patch>
+        <Patch velocity="low">mvt1-1-crescendo</Patch>
+		<Range>84-127</Range>
+		<UseDamperPedal>false</UseDamperPedal>
+      </Channel>	  
+    </Program>  
+    <Program id="+">		<!-- m. 12 -->
+	  <Channel id="0">
+        <Patch>mvt1-1-piano</Patch>
+		<UseDamperPedal>false</UseDamperPedal>	
+	  </Channel>		
+      <Channel id="1">
+        <Patch>mvt1-1</Patch>
+		<Range>0-83</Range>
+		<UseDamperPedal>false</UseDamperPedal>
+      </Channel>
+      <Channel id="1">
+        <Patch>mvt1-1-boost</Patch>
+		<Range>84-127</Range>
+		<UseDamperPedal>false</UseDamperPedal>
+      </Channel> 
+    </Program>  
+    <Program id="+">		<!-- m. 18 -->
+	  <Channel id="0">
+        <Patch>mvt1-1-piano</Patch>
+		<UseDamperPedal>false</UseDamperPedal>	
+	  </Channel>		
+      <Channel id="1">
+        <Patch>mvt1-3</Patch>
+		<UseDamperPedal>false</UseDamperPedal>
+      </Channel>
+    </Program>  
+    <Program id="+">		<!-- m. 25 end, movement II -->
+	  <Channel id="0">
+	    <Patch>mvt2-1</Patch>
+		<Range>0-58</Range>
+        <UseDamperPedal>true</UseDamperPedal>
+        <UseSostenutoPedal>true</UseSostenutoPedal>		
+	  </Channel>
+      <Channel id="1">
+        <Patch>mvt1-1</Patch>
+		<Range>0-83</Range>
+		<UseDamperPedal>false</UseDamperPedal>
+      </Channel>
+      <Channel id="1">
+        <Patch>mvt1-1-boost</Patch>
+		<Range>84-127</Range>
+		<UseDamperPedal>false</UseDamperPedal>
+      </Channel> 
+    </Program>  	
+    <Program id="+">		<!-- movement III -->
+	  <Channel id="0">
+	    <Patch>mvt3-piano-1</Patch>
+		<Range>0-56</Range>
+        <UseDamperPedal>false</UseDamperPedal>
+        <UseSostenutoPedal>true</UseSostenutoPedal>		
+	  </Channel>
+      <Channel id="1">
+        <Patch>mvt3-aux-1</Patch>
+		<UseDamperPedal>true</UseDamperPedal>
+      </Channel>  
+    </Program>  		
+    <Program id="+">		<!-- m. 10 -->
+      <Channel id="1">
+        <Patch>mvt3-aux-1</Patch>
+		<UseDamperPedal>true</UseDamperPedal>
+      </Channel>  
+    </Program>  	
+    <Program id="+">		<!-- m. 13 -->
+	  <Channel id="0">
+	    <Patch>mvt3-piano-2</Patch>
+		<Range>55,58,59</Range>
+        <UseDamperPedal>false</UseDamperPedal>
+        <UseSostenutoPedal>true</UseSostenutoPedal>		
+	  </Channel>
+      <Channel id="1">
+        <Patch>mvt3-aux-1</Patch>
+		<UseDamperPedal>true</UseDamperPedal>
+      </Channel>  
+    </Program>  		
+    <Program id="+">		<!-- m. 16 -->
+	  <Channel id="0">
+	    <Patch>mvt3-piano-1</Patch>
+		<Range>75-127</Range>
+        <UseDamperPedal>false</UseDamperPedal>
+        <UseSostenutoPedal>false</UseSostenutoPedal>		
+	  </Channel>	
+      <Channel id="1">
+        <Patch>mvt3-aux-1</Patch>
+		<UseDamperPedal>true</UseDamperPedal>
+      </Channel>  
+    </Program>  	
+    <Program id="+">		<!-- m. 18 -->
+	  <Channel id="0">
+	    <Patch>mvt3-piano-1</Patch>
+        <UseDamperPedal>false</UseDamperPedal>
+        <UseSostenutoPedal>false</UseSostenutoPedal>		
+	  </Channel>	
+      <Channel id="1">
+        <Patch>mvt3-piano-1</Patch>
+        <UseDamperPedal>false</UseDamperPedal>
+        <UseSostenutoPedal>true</UseSostenutoPedal>
+      </Channel>  
+    </Program>  	
+    <Program id="+">		<!-- m. 19 second half -->
+	  <Channel id="0">
+	    <Patch>mvt3-piano-1</Patch>
+		<Range>0-59</Range>
+        <UseDamperPedal>true</UseDamperPedal>
+        <UseSostenutoPedal>true</UseSostenutoPedal>		
+	  </Channel>	
+      <Channel id="1">
+        <Patch>mvt3-aux-1</Patch>
+		<UseDamperPedal>false</UseDamperPedal>
+      </Channel>  
+    </Program> 		
+    <Program id="+">		<!-- movement IV -->
+      <Channel id="0">
+        <Patch>mvt4-sostenuto</Patch>
+        <Range>38</Range>
+        <Priority>1</Priority>
+      </Channel>
+      <Channel id="0">
+        <Patch>mvt4-piano-cresc-1</Patch>
+        <UseDamperPedal>false</UseDamperPedal>
+        <UseSostenutoPedal>false</UseSostenutoPedal>
+        <Range>39-127</Range>
+      </Channel>	  
+    </Program>  	
+    <Program id="+">		<!-- m. 10 -->
+      <Channel id="0">
+        <Patch>mvt4-piano-cresc-1</Patch>
+        <UseDamperPedal>false</UseDamperPedal>
+        <UseSostenutoPedal>false</UseSostenutoPedal>
+        <Range>57,64,68,70-127</Range>
+      </Channel>	  
+    </Program>  
+    <Program id="+">		<!-- m. 11 -->
+      <Channel id="0">
+        <Patch>mvt4-piano-cresc-1</Patch>
+        <UseDamperPedal>false</UseDamperPedal>
+        <UseSostenutoPedal>false</UseSostenutoPedal>
+        <Range>68-73,75-127</Range>
+      </Channel>	
+      <Channel id="0">
+        <Patch>mvt4-piano-noncresc-1</Patch>
+        <UseDamperPedal>false</UseDamperPedal>
+        <UseSostenutoPedal>false</UseSostenutoPedal>
+        <Range>59,66,74</Range>
+      </Channel>	  
+    </Program>  
+    <Program id="+">		<!-- m. 14 -->
+      <Channel id="0">
+        <Patch>mvt4-piano-cresc-1</Patch>
+        <UseDamperPedal>false</UseDamperPedal>
+        <UseSostenutoPedal>false</UseSostenutoPedal>
+        <Range>41-127</Range>
+      </Channel>	  
+    </Program>  
+    <Program id="+">		<!-- m. 20 -->
+      <Channel id="0">
+         <Patch>mvt4-piano-noncresc-1</Patch>
+         <UseDamperPedal>false</UseDamperPedal>
+         <UseSostenutoPedal>false</UseSostenutoPedal>
+         <Range>0-68,71</Range>		
+      </Channel>	
+      <Channel id="0">
+         <Patch>mvt4-piano-cresc-2</Patch>
+         <UseDamperPedal>false</UseDamperPedal>
+         <UseSostenutoPedal>false</UseSostenutoPedal>		
+         <Range>69-70,72-127</Range>
+      </Channel>	
+      <Channel id="1">
+        <Patch>mvt4-aux-1</Patch>
+		<UseDamperPedal>false</UseDamperPedal>
+      </Channel>  
+    </Program> 
+    <Program id="+">		<!-- m. 24 -->
+      <Channel id="0">
+         <Patch>mvt4-piano-noncresc-1</Patch>
+         <UseDamperPedal>false</UseDamperPedal>
+         <UseSostenutoPedal>false</UseSostenutoPedal>
+         <Range>0-59,61-63,67-68,71</Range>		
+      </Channel>	
+      <Channel id="0">
+         <Patch>mvt4-piano-cresc-2</Patch>
+         <UseDamperPedal>false</UseDamperPedal>
+         <UseSostenutoPedal>false</UseSostenutoPedal>		
+         <Range>60,64-66,69-70,72-127</Range>
+      </Channel>	
+      <Channel id="1">
+        <Patch>mvt4-aux-1</Patch>
+		<UseDamperPedal>false</UseDamperPedal>
+      </Channel>  
+    </Program> 
+    <Program id="+">		<!-- m. 29 -->
+      <Channel id="0">
+         <Patch>mvt4-piano-noncresc-1</Patch>
+         <UseDamperPedal>false</UseDamperPedal>
+         <UseSostenutoPedal>false</UseSostenutoPedal>
+         <Range>0-61,64,68-127</Range>		
+      </Channel>	
+      <Channel id="1">
+        <Patch>mvt4-aux-1</Patch>
+		<UseDamperPedal>false</UseDamperPedal>
+      </Channel>  
+    </Program> 
+    <Program id="+">		<!-- m. 33 -->
+      <Channel id="0">
+         <Patch>mvt4-piano-noncresc-2</Patch>
+         <UseDamperPedal>false</UseDamperPedal>
+         <UseSostenutoPedal>false</UseSostenutoPedal>
+      </Channel>	
+      <Channel id="1">
+        <Patch>mvt4-piano-noncresc-2</Patch>
+		<UseDamperPedal>false</UseDamperPedal>
+      </Channel>  
+    </Program> 
+    <Program id="+">		<!-- m. 50 -->
+    </Program> 		
+    <Program id="+">		<!-- movement V -->
+	  <Channel id="0">
+	    <Patch>mvt5-1</Patch>
+            <Range>0-68</Range>
+            <UseDamperPedal>false</UseDamperPedal>
+            <UseSostenutoPedal>false</UseSostenutoPedal>		
+	  </Channel>	
+	  <Channel id="0">
+	    <Patch>mvt5-1-boost</Patch>
+            <Range>69-74</Range>
+            <UseDamperPedal>false</UseDamperPedal>
+            <UseSostenutoPedal>false</UseSostenutoPedal>		
+	  </Channel>	
+	</Program>
+    <Program id="+">		<!-- m. 6 -->
+	  <Channel id="0">
+	    <Patch>mvt5-1</Patch>
+            <Range>0-61,63</Range>
+            <UseDamperPedal>false</UseDamperPedal>
+            <UseSostenutoPedal>false</UseSostenutoPedal>		
+	  </Channel>	
+	  <Channel id="0">
+	    <Patch>mvt5-1-boost</Patch>
+            <Range>62,64-74</Range>
+            <UseDamperPedal>false</UseDamperPedal>
+            <UseSostenutoPedal>false</UseSostenutoPedal>		
+	  </Channel>	
+	</Program>
+    <Program id="+">		<!-- m. 11 -->
+	  <Channel id="0">
+	    <Patch>mvt5-1</Patch>
+            <Range>0-62</Range>
+            <UseDamperPedal>false</UseDamperPedal>
+            <UseSostenutoPedal>false</UseSostenutoPedal>		
+	  </Channel>	
+	  <Channel id="0">
+	    <Patch>mvt5-1-boost</Patch>
+            <Range>63-72</Range>
+            <UseDamperPedal>false</UseDamperPedal>
+            <UseSostenutoPedal>false</UseSostenutoPedal>		
+	  </Channel>	
+	</Program>
+    <Program id="+">		<!-- m. 17 -->
+	  <Channel id="0">
+	    <Patch>mvt5-1</Patch>
+            <Range>0-59</Range>
+            <UseDamperPedal>false</UseDamperPedal>
+            <UseSostenutoPedal>false</UseSostenutoPedal>		
+	  </Channel>	
+	  <Channel id="0">
+	    <Patch>mvt5-1-boost</Patch>
+            <Range>60-66</Range>
+            <UseDamperPedal>false</UseDamperPedal>
+            <UseSostenutoPedal>false</UseSostenutoPedal>		
+	  </Channel>	
+	</Program>	
+    <Program id="+">		<!-- m. 23 end of measure -->
+	  <Channel id="0">
+	    <Patch>mvt5-2</Patch>
+		<Range>25</Range>
+        <UseDamperPedal>true</UseDamperPedal>
+        <UseSostenutoPedal>true</UseSostenutoPedal>		
+	  </Channel>	
+	</Program>	
+    <Program id="+">		<!-- m. 39 -->
+	  <Channel id="0">
+	    <Patch>mvt5-3</Patch>
+        <UseDamperPedal>false</UseDamperPedal>
+        <UseSostenutoPedal>false</UseSostenutoPedal>		
+	  </Channel>	
+	</Program>		
+    <Program id="+">		<!-- movement VI -->
+      <Channel id="0">
+        <Patch>mvt6-1</Patch>
+        <Range>42-55</Range>
+        <UseSostenutoPedal>true</UseSostenutoPedal>
+      </Channel>
+    </Program>		
+    <Program id="+">		<!-- movement VII -->
+      <Channel id="0" velocitySplitPoint="64">
+        <Patch velocity="high">mvt7-noncresc-1</Patch>
+        <Range>62,68,75,82</Range>
+        <UseSostenutoPedal>true</UseSostenutoPedal>
+        <UseDamperPedal>false</UseDamperPedal>
+      </Channel>	  
+    </Program>		
+    <Program id="+">		<!-- m. 5 -->
+      <Channel id="0" velocitySplitPoint="64">
+        <Patch velocity="high">mvt7-noncresc-1</Patch>
+        <Range>61,67,74,81</Range>
+        <UseSostenutoPedal>true</UseSostenutoPedal>
+        <UseDamperPedal>false</UseDamperPedal>
+      </Channel>
+      <Channel id="0">
+        <Patch>mvt7-cresc-1</Patch>
+        <Range>52-59</Range>
+        <UseSostenutoPedal>true</UseSostenutoPedal>
+        <UseDamperPedal>true</UseDamperPedal>
+      </Channel>	  
+    </Program>										
+    <Program id="+">		<!-- m. 10 last beat -->
+      <Channel id="0" velocitySplitPoint="64">
+        <Patch velocity="high">mvt7-noncresc-1</Patch>
+        <Range>59,66,73,77,79,84,90</Range>
+        <UseSostenutoPedal>true</UseSostenutoPedal>
+      </Channel>
+      <Channel id="0">
+        <Patch>mvt7-noncresc-1</Patch>
+        <Range>24-51</Range>
+        <UseSostenutoPedal>true</UseSostenutoPedal>
+		<UseDamperPedal>true</UseDamperPedal>
+      </Channel>	  
+    </Program>	
+    <Program id="+">		<!-- m. 14 -->
+      <Channel id="0">
+        <Patch>mvt7-sweep-1</Patch>
+        <Range>63</Range>
+        <UseSostenutoPedal>true</UseSostenutoPedal>
+		<UseDamperPedal>true</UseDamperPedal>
+      </Channel>	
+    </Program>		
+    <Program id="+">		<!-- m. 16 -->
+    </Program>	
+    <Program id="+">		<!-- m. 47 -->
+      <Channel id="0">
+        <Patch>mvt7-noncresc-2</Patch>
+        <Range>51,53,56,57,58</Range>
+        <UseSostenutoPedal>true</UseSostenutoPedal>
+        <UseDamperPedal>true</UseDamperPedal>
+      </Channel>	
+    </Program>
+    <Program id="+">		<!-- m. 60 -->
+    </Program>			
+    <Program id="+">		<!-- m. 73 -->
+      <Channel id="0">
+        <Patch>mvt7-noncresc-1</Patch>
+        <Range>24-68</Range>
+        <UseSostenutoPedal>false</UseSostenutoPedal>
+        <UseDamperPedal>false</UseDamperPedal>
+      </Channel>	  
+    </Program>					
+    <Program id="+">		<!-- m. 84 -->
+      <Channel id="0">
+        <Patch>mvt7-sweep-1</Patch>
+        <Range>61,62,67,68,75</Range>
+        <UseSostenutoPedal>true</UseSostenutoPedal>
+		<UseDamperPedal>true</UseDamperPedal>
+      </Channel>	
+      <Channel id="0">
+        <Patch>mvt7-noncresc-1</Patch>
+        <Range>39,46</Range>
+        <UseSostenutoPedal>true</UseSostenutoPedal>
+        <UseDamperPedal>true</UseDamperPedal>
+        <Priority>1</Priority>
+      </Channel>		  
+    </Program>	
+    <Program id="+">		<!-- m. 96, movement VIII -->
+    </Program>			
+		
+    <Program id="+">		<!-- movement IX -->
+      <Channel id="1">
+        <Patch>mvt9-aux-1</Patch>
+        <UseDamperPedal>false</UseDamperPedal>
+      </Channel>  
+    </Program> 
+    <Program id="+">		<!-- m. 29 -->
+      <Channel id="0">
+        <Patch>mvt9-piano-harmonic-1</Patch>
+        <UseDamperPedal>false</UseDamperPedal>
+        <Range>59,64,66,71,79,80</Range>
+      </Channel>  
+    </Program> 
+    <Program id="+">		<!-- m. 33 -->
+      <Channel id="1">
+        <Patch>mvt9-aux-1</Patch>
+        <UseDamperPedal>false</UseDamperPedal>
+      </Channel>  
+    </Program>
+    <Program id="+">		<!-- m. 52 -->
+      <Channel id="0">
+        <Patch>mvt9-piano-1</Patch>
+		<Range>61,66,67,71,72</Range>
+		<UseDamperPedal>false</UseDamperPedal>
+		<UseSostenutoPedal>false</UseSostenutoPedal>
+      </Channel>  
+      <Channel id="0">
+        <Patch>mvt9-piano-3</Patch>
+		<Range>56,58</Range>
+		<UseDamperPedal>false</UseDamperPedal>
+		<UseSostenutoPedal>false</UseSostenutoPedal>
+      </Channel>  
+      <Channel id="1">
+        <Patch>mvt9-aux-2</Patch>
+		<UseDamperPedal>false</UseDamperPedal>
+		<UseSostenutoPedal>false</UseSostenutoPedal>
+      </Channel>  	  
+      <Channel id="1">
+        <Patch>mvt9-aux-2-boost</Patch>
+		<Range>71,72,74</Range>
+		<UseDamperPedal>false</UseDamperPedal>
+		<UseSostenutoPedal>false</UseSostenutoPedal>
+      </Channel>  	  	  
+    </Program> 
+    <Program id="+">		<!-- m. 64 -->
+      <Channel id="0">
+        <Patch>mvt9-piano-1-soft</Patch>
+		<Range>56,58-71</Range>
+		<UseDamperPedal>false</UseDamperPedal>
+		<UseSostenutoPedal>false</UseSostenutoPedal>
+      </Channel>  
+      <Channel id="1">
+        <Patch>mvt9-aux-2</Patch>
+		<UseDamperPedal>false</UseDamperPedal>
+		<UseSostenutoPedal>false</UseSostenutoPedal>
+      </Channel>  	  
+    </Program> 			
+    <Program id="+">		<!-- m. 77 -->
+      <Channel id="0">
+        <Patch>mvt9-piano-2</Patch>
+		<Range>0-55,57-60,62-65,67-74</Range>
+		<UseDamperPedal>false</UseDamperPedal>
+      </Channel>  
+      <Channel id="0">
+        <Patch>mvt9-piano-1-soft</Patch>
+		<Range>56,61,66</Range>
+		<UseDamperPedal>false</UseDamperPedal>
+      </Channel>  	  
+      <Channel id="1">
+        <Patch>mvt9-piano-1-soft</Patch>
+		<UseDamperPedal>false</UseDamperPedal>
+      </Channel>  	  
+    </Program> 	 		 	
+    <Program id="+">		<!-- m. 81 -->
+    </Program>			
+
+
+	<Program id="126">	<!-- demo -->
+	  <Channel id="0">
+	    <Patch>mvt5-3</Patch>
+        <UseDamperPedal>false</UseDamperPedal>
+        <UseSostenutoPedal>true</UseSostenutoPedal>		
+	  </Channel>
+      <Channel id="1">
+        <Patch>mvt1-1</Patch>
+		<UseDamperPedal>false</UseDamperPedal>
+      </Channel>	
+	</Program>
+	
+    <Program id="127">	<!-- calibration -->
+      <Channel id="0">
+        <Patch>calibrate</Patch>
+      </Channel>
+      <Channel id="1">
+        <Patch>calibrate</Patch>
+      </Channel>
+    </Program>
+  </PatchTable>
+
+  <StringMap>
+    <Map note="24-35" string="36-47"/>	<!-- C1-B1 -->
+    <Map note="84-95" string="72-83"/>  <!-- C6-B6 -->
+    <Map note="96-107" string="72-83"/> <!-- C7-B7 -->
+	<Map note="85,87" string="66,63"/>  <!-- C#6, Eb6; also try 61, 63 -->
+	<Map note="91-95" string="72-76"/>  <!-- or 67-71 -->
+    <!--<Map note="93-95" string="75-77"/>-->
+  </StringMap>
+
+  <GlobalControls>
+    <Control name="MasterVolume" id="72"/>
+	<Control name="PitchTrackInputMute" id="20"/>
+  </GlobalControls>
+  <!--<GlobalControls>
+    <Control name="MasterVolume" id="19"/>
+    <Control name="PitchTrackInputMute" id="18" threshold="8"/>
+  </GlobalControls>-->
+</PatchTableRoot>

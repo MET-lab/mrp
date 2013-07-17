@@ -1,0 +1,18 @@
+PnoScanController
+RealTimeMidiNote::setAbsolutePitch()
+RealTimeMidiNote::getCurrentHarmonicAmplitudes()
+PllSynth::getCurrentHarmonicAmplitudes()
+MidiController::oscHandleGlobalParameters()
+RealTimeMidiNote::createNote() - Edit to copy harmonic amplitudes from prototype note?
+RealTimeMidiNote::PllSynthQuality::resetHarmonicAmplitudes()	-	delete?
+
+
+
+
+Note in program table holds factory classes. Does parsexml create factory classes from defined parameters or actual notes?
+
+MidiNote::PllSynthFactory::createSynth() - line 1220
+	
+	- Do I have to reset harmonicAmplitudesMin_ and harmonicAmplitudesMax_?
+		- Set originally in RealTimeMidiNote::PllSynthQuality::parseXml()
+

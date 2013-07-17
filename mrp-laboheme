@@ -1,0 +1,140 @@
+<?xml version="1.0" standalone="yes"?>
+<PatchTableRoot>
+
+<!--< =============== >-->
+<!--<     Patches     >-->
+<!--< =============== >-->
+
+<!--< BASIC >-->
+<Patch name="PNOScanDemo" class="RealTimeMidiNote">
+    <VelocityCurve>2</VelocityCurve>
+    <Synth class="PllSynth">
+      <Parameter name="GlobalAmplitude" value="-5dB/10dB"/>
+      <Parameter name="HarmonicAmplitudes" value="1,0,0,0,0,0,0,0,0"/>
+      <Parameter name="LoopGain" value="100000"/>
+    </Synth>
+    <RealTimeQualities>
+        <Quality name="Intensity">
+            <Parameter name="HarmonicAmplitudes" value="1,0,0,0,0,0,0,0,0"/>
+            <Parameter name="GlobalAmplitude" value="-5dB/0dB" concavity="0" mode="exp"/>
+        </Quality>          
+        <Quality name="Pitch">
+            <Parameter name="RelativeFrequency" value="1/2" mode="exp"/>
+            <Parameter name="LoopGain" value="0/0" concavity="-1000"/>
+            <Vibrato weight=".99" clipLower="false" clipUpper="false"/>
+        </Quality>
+        <Quality name="Harmonic">
+            <Parameter name="HarmonicCentroid" value="1" round="0" shift="multiply"/>
+            <Parameter name="GlobalAmplitude" value="1/8" concavity="2"/>
+        </Quality>
+            <UseHarmonicSweep range="10" spread="-2" usePitchBend="true"/>
+    </RealTimeQualities>
+</Patch>
+    
+<!--< HARMONIC SWEEP FAST >-->
+<Patch name="harmonicSweepFast" class="MidiNote">
+    <Synth class="PllSynth">
+        <Parameter name="LoopGain" value="100000"/>
+        <Parameter name="RelativeFrequency" value="1"/>
+  <!--<      <Parameter name="UseInterferenceRejection" value="true"/> >-->
+        <Parameter name="GlobalAmplitude" value="-15db" concavity="1"/>
+        <Parameter name="HarmonicAmplitudes" value="1,0,0,0,0,0,0,0,0,0,0" concavity="0">
+            <Ramp value="1,1,1,0.5,0,1,0,0,0,0,0" duration="1.5" type="log"/>
+            <Ramp value="0,1,1,1,0.5,0,1,0,0,0,0,0" duration="0.1" type="log"/>
+            <Ramp value="0,0,1,1,1,0.5,0,1,0,0,0" duration="0.05" type="log"/>
+            <Ramp value="0,0,0,1,1,1,0.5,0,0,1,0" duration="0.05" type="log"/>
+            <Ramp value="0,0,0,0,1,1,1,0.5,0,0,1" duration="0.05" type="log"/>
+            <Ramp value="0,0,0,0,0,1,1,1,0.5,0,0" duration="0.03" type="log"/>
+            <Ramp value="0,0,0,0,0,0,1,1,1,0.5,0" duration="0.03" type="log"/>
+            <Ramp value="0,0,0,0.5,0.5,0.5,0,1,1,1,0.5" duration="0.03" type="log"/>
+            <Ramp value="0,0,1,1,1,0,0,0,1,1,1" duration="0.03" type="log"/>
+        </Parameter>
+    </Synth>
+</Patch>  
+    
+<!--< HARMONIC GLISS >-->
+<Patch name="harmonic-up0" class="RealTimeMidiNote"> <!-- UseHarmonicSweep -->
+    <VelocityCurve>2</VelocityCurve>
+    <Synth class="PllSynth">
+        <Parameter name="GlobalAmplitude" value="-25dB/-25dB"/>
+        <Parameter name="HarmonicAmplitudes" value="1"/>
+        <!-- <Parameter name="LoopGain" value="100000"/> -->
+    </Synth>
+    <RealTimeQualities>
+        <Quality name="Intensity">
+            <Parameter name="HarmonicAmplitudes" value="0"/>
+            <Parameter name="GlobalAmplitude" value="-55dB/-15dB" concavity="0" mode="exp"/>
+        </Quality>
+        <Quality name="Brightness">
+            <Vibrato weight="0" clipLower="false" clipUpper="false"/>
+        </Quality>
+        <Quality name="Pitch">
+            <Parameter name="RelativeFrequency" value="1/2" mode="exp"/>
+            <Parameter name="LoopGain" value="0/0" concavity="-1000"/>
+            <Vibrato weight=".059" clipLower="false" clipUpper="false"/>
+        </Quality>
+        <Quality name="Harmonic">
+            <Parameter name="HarmonicCentroid" value="1/4" round="0" shift="multiply"/>
+            <Parameter name="GlobalAmplitude" value="1/8" concavity="2"/>
+        </Quality>
+        <UseHarmonicSweep range="10" spread="-2"/>
+        <!-- <KeyDownHoldoff delay=".05" scaler="0.5"/> -->
+    </RealTimeQualities>
+</Patch>
+
+<!--< =============== >-->
+<!--<   Patch Tables  >-->
+<!--< =============== >-->
+<PatchTable>
+    
+<!--< NONE >-->
+<Program id="0">
+    <Channel id="0">
+    </Channel>
+</Program>
+    
+<!--< BASIC >-->
+<Program id="1">
+    <Channel id="0">
+        <Patch>PNOScanDemo</Patch>
+        <UseDamperPedal>true</UseDamperPedal>
+    </Channel>
+</Program>
+    
+<!--< HARMONIC SWEEP FAST >-->
+<Program id ="2">
+    <Channel id="0">
+        <Patch>harmonicSweepFast</Patch>
+        <Range>0-127</Range>
+    </Channel>
+</Program>
+    
+<!--< HARMONIC GLISS >-->
+<Program id ="3">
+    <Channel id="0">
+        <Patch>harmonic-up0</Patch>
+        <Range>0-127</Range>
+    </Channel>
+</Program>
+    
+</PatchTable>
+
+<!--< =============== >-->
+<!--<    String Map   >-->
+<!--< =============== >-->
+<StringMap>
+    <Map note="84-95" string="72-83"/>
+    <Map note="96-107" string="72-83"/>
+    <Map note="93-95" string="75-77"/>
+</StringMap>
+
+<!--< =============== >-->
+<!--< Global Controls >-->
+<!--< =============== >-->
+    
+<GlobalControls>
+    <Control name="MasterVolume" id="30"/>
+    <Control name="PitchTrackInputMute" id="18" threshold="8"/>
+</GlobalControls>
+    
+</PatchTableRoot>

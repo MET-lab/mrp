@@ -1,0 +1,1255 @@
+<?xml version="1.0" standalone="yes"?>
+<PatchTableRoot>
+  <Patch name="basic" class="RealTimeMidiNote">
+    <VelocityCurve>2</VelocityCurve>
+    <Synth class="PllSynth">
+      <Parameter name="GlobalAmplitude" value="-15db/-15dB"/>
+      <Parameter name="HarmonicAmplitudes" value="1"/>
+      <Parameter name="LoopGain" value="100000"/>
+    </Synth>
+  </Patch>
+  <Patch name="calibrate" class="CalibratorNote">		<!-- for Oxygen8 -->
+    <Parameter name="GlobalAmplitude" value="-26dB"/>
+    <Control name="phaseOffset" id="8" channel="0"/>
+    <Control name="amplitudeOffset" id="13" channel="0"/>
+  </Patch>
+
+  <Patch name="harmonic-up0" class="RealTimeMidiNote"> <!-- UseHarmonicSweep -->
+    <VelocityCurve>2</VelocityCurve>
+    <Synth class="PllSynth">
+      <Parameter name="GlobalAmplitude" value="-25dB/-25dB"/>
+      <Parameter name="HarmonicAmplitudes" value="1"/>
+      <!-- <Parameter name="LoopGain" value="100000"/> -->
+    </Synth>
+    <RealTimeQualities>
+      <Quality name="Intensity">
+		<Parameter name="HarmonicAmplitudes" value="0"/>
+	 	<Parameter name="GlobalAmplitude" value="-55dB/-15dB" concavity="0" mode="exp"/>
+      </Quality>
+      <Quality name="Brightness">
+        <Vibrato weight="0" clipLower="false" clipUpper="false"/>
+      </Quality>     
+      <Quality name="Pitch">
+        <Parameter name="RelativeFrequency" value="1/2" mode="exp"/>
+	<Parameter name="LoopGain" value="0/0" concavity="-1000"/>
+        <Vibrato weight=".059" clipLower="false" clipUpper="false"/>
+      </Quality>    
+      <Quality name="Harmonic">
+        <Parameter name="HarmonicCentroid" value="1/4" round="0" shift="multiply"/>
+	<Parameter name="GlobalAmplitude" value="1/8" concavity="2"/>
+      </Quality>
+		<UseHarmonicSweep range="10" spread="-2"/>
+      <!-- <KeyDownHoldoff delay=".05" scaler="0.5"/> -->
+    </RealTimeQualities>
+  </Patch>
+  <Patch name="harmonic-down0" class="RealTimeMidiNote"> <!-- UseHarmonicSweep -->
+    <VelocityCurve>2</VelocityCurve>
+    <Synth class="PllSynth">
+      <Parameter name="GlobalAmplitude" value="-25dB/-25dB"/>
+      <Parameter name="HarmonicAmplitudes" value="1"/>
+      <!-- <Parameter name="LoopGain" value="100000"/> -->
+    </Synth>
+    <RealTimeQualities>
+      <Quality name="Intensity">
+		<Parameter name="HarmonicAmplitudes" value="0"/>
+	 	<Parameter name="GlobalAmplitude" value="-55dB/-15dB" concavity="0" mode="exp"/>
+      </Quality>
+      <Quality name="Brightness">
+        <Vibrato weight="0" clipLower="false" clipUpper="false"/>
+      </Quality>     
+      <Quality name="Pitch">
+        <Parameter name="RelativeFrequency" value="1/2" mode="exp"/>
+	<Parameter name="LoopGain" value="0/0" concavity="-1000"/>
+        <Vibrato weight=".059" clipLower="false" clipUpper="false"/>
+      </Quality>    
+      <Quality name="Harmonic">
+        <Parameter name="HarmonicCentroid" value="1/4" round="0" shift="multiply"/>
+	<Parameter name="GlobalAmplitude" value="1/8" concavity="2"/>
+      </Quality>
+		<UseHarmonicSweep range="-10" spread="-2"/>
+    </RealTimeQualities>
+  </Patch>
+  <Patch name="harmonic-up1" class="RealTimeMidiNote"> <!-- UseHarmonicSweep -->
+    <VelocityCurve>2</VelocityCurve>
+    <Synth class="PllSynth">
+      <Parameter name="GlobalAmplitude" value="-25dB/-25dB"/>
+      <Parameter name="HarmonicAmplitudes" value="1"/>
+      <!-- <Parameter name="LoopGain" value="100000"/> -->
+    </Synth>
+    <RealTimeQualities>
+      <Quality name="Intensity">
+		<Parameter name="HarmonicAmplitudes" value="0"/>
+	 	<Parameter name="GlobalAmplitude" value="-55dB/-15dB" concavity="0" mode="exp"/>
+      </Quality>
+      <Quality name="Brightness">
+        <Vibrato weight="0" clipLower="false" clipUpper="false"/>
+      </Quality>     
+      <Quality name="Pitch">
+        <Parameter name="RelativeFrequency" value="1/2" mode="exp"/>
+	<Parameter name="LoopGain" value="0/0" concavity="-1000"/>
+        <Vibrato weight=".059" clipLower="false" clipUpper="false"/>
+      </Quality>    
+      <Quality name="Harmonic">
+        <Parameter name="HarmonicCentroid" value="1/4" round="0" shift="multiply"/>
+	<Parameter name="GlobalAmplitude" value="1/8" concavity="2"/>
+      </Quality>
+		<UseHarmonicSweep range="10" spread="-1"/>
+      <!-- <KeyDownHoldoff delay=".05" scaler="0.5"/> -->
+    </RealTimeQualities>
+  </Patch>
+  <Patch name="harmonic-down1" class="RealTimeMidiNote"> <!-- UseHarmonicSweep -->
+    <VelocityCurve>2</VelocityCurve>
+    <Synth class="PllSynth">
+      <Parameter name="GlobalAmplitude" value="-25dB/-25dB"/>
+      <Parameter name="HarmonicAmplitudes" value="1"/>
+      <!-- <Parameter name="LoopGain" value="100000"/> -->
+    </Synth>
+    <RealTimeQualities>
+      <Quality name="Intensity">
+		<Parameter name="HarmonicAmplitudes" value="0"/>
+	 	<Parameter name="GlobalAmplitude" value="-55dB/-15dB" concavity="0" mode="exp"/>
+      </Quality>
+      <Quality name="Brightness">
+        <Vibrato weight="0" clipLower="false" clipUpper="false"/>
+      </Quality>     
+      <Quality name="Pitch">
+        <Parameter name="RelativeFrequency" value="1/2" mode="exp"/>
+	<Parameter name="LoopGain" value="0/0" concavity="-1000"/>
+        <Vibrato weight=".059" clipLower="false" clipUpper="false"/>
+      </Quality>    
+      <Quality name="Harmonic">
+        <Parameter name="HarmonicCentroid" value="1/4" round="0" shift="multiply"/>
+	<Parameter name="GlobalAmplitude" value="1/8" concavity="2"/>
+      </Quality>
+		<UseHarmonicSweep range="-10" spread="-1"/>
+    </RealTimeQualities>
+  </Patch>
+  <Patch name="harmonic-up2" class="RealTimeMidiNote"> <!-- UseHarmonicSweep -->
+    <VelocityCurve>2</VelocityCurve>
+    <Synth class="PllSynth">
+      <Parameter name="GlobalAmplitude" value="-25dB/-25dB"/>
+      <Parameter name="HarmonicAmplitudes" value="1"/>
+      <!-- <Parameter name="LoopGain" value="100000"/> -->
+    </Synth>
+    <RealTimeQualities>
+      <Quality name="Intensity">
+		<Parameter name="HarmonicAmplitudes" value="0"/>
+	 	<Parameter name="GlobalAmplitude" value="-55dB/-15dB" concavity="0" mode="exp"/>
+      </Quality>
+      <Quality name="Brightness">
+        <Vibrato weight="0" clipLower="false" clipUpper="false"/>
+      </Quality>     
+      <Quality name="Pitch">
+        <Parameter name="RelativeFrequency" value="1/2" mode="exp"/>
+	<Parameter name="LoopGain" value="0/0" concavity="-1000"/>
+        <Vibrato weight=".059" clipLower="false" clipUpper="false"/>
+      </Quality>    
+      <Quality name="Harmonic">
+        <Parameter name="HarmonicCentroid" value="1/4" round="0" shift="multiply"/>
+	<Parameter name="GlobalAmplitude" value="1/8" concavity="2"/>
+      </Quality>
+		<UseHarmonicSweep range="12" spread="0"/>
+      <!-- <KeyDownHoldoff delay=".05" scaler="0.5"/> -->
+    </RealTimeQualities>
+  </Patch>
+  <Patch name="harmonic-up2-med" class="RealTimeMidiNote"> <!-- UseHarmonicSweep -->
+    <VelocityCurve>2</VelocityCurve>
+    <Synth class="PllSynth">
+      <Parameter name="GlobalAmplitude" value="-25dB/-25dB"/>
+      <Parameter name="HarmonicAmplitudes" value="1"/>
+      <!-- <Parameter name="LoopGain" value="100000"/> -->
+    </Synth>
+    <RealTimeQualities>
+      <Quality name="Intensity">
+		<Parameter name="HarmonicAmplitudes" value="0"/>
+	 	<Parameter name="GlobalAmplitude" value="-55dB/-15dB" concavity="0" mode="exp"/>
+      </Quality>
+      <Quality name="Brightness">
+        <Vibrato weight="0" clipLower="false" clipUpper="false"/>
+      </Quality>     
+      <Quality name="Pitch">
+        <Parameter name="RelativeFrequency" value="1/2" mode="exp"/>
+	<Parameter name="LoopGain" value="0/0" concavity="-1000"/>
+        <Vibrato weight=".059" clipLower="false" clipUpper="false"/>
+      </Quality>    
+      <Quality name="Harmonic">
+        <Parameter name="HarmonicCentroid" value="1/4" round="0" shift="multiply"/>
+	<Parameter name="GlobalAmplitude" value="1/8" concavity="2"/>
+      </Quality>
+		<UseHarmonicSweep range="10" spread="0"/>
+      <!-- <KeyDownHoldoff delay=".05" scaler="0.5"/> -->
+    </RealTimeQualities>
+  </Patch>
+  <Patch name="harmonic-up2-short" class="RealTimeMidiNote"> <!-- UseHarmonicSweep -->
+    <VelocityCurve>2</VelocityCurve>
+    <Synth class="PllSynth">
+      <Parameter name="GlobalAmplitude" value="-25dB/-25dB"/>
+      <Parameter name="HarmonicAmplitudes" value="1"/>
+      <!-- <Parameter name="LoopGain" value="100000"/> -->
+    </Synth>
+    <RealTimeQualities>
+      <Quality name="Intensity">
+		<Parameter name="HarmonicAmplitudes" value="0"/>
+	 	<Parameter name="GlobalAmplitude" value="-55dB/-15dB" concavity="0" mode="exp"/>
+      </Quality>
+      <Quality name="Brightness">
+        <Vibrato weight="0" clipLower="false" clipUpper="false"/>
+      </Quality>     
+      <Quality name="Pitch">
+        <Parameter name="RelativeFrequency" value="1/2" mode="exp"/>
+	<Parameter name="LoopGain" value="0/0" concavity="-1000"/>
+        <Vibrato weight=".059" clipLower="false" clipUpper="false"/>
+      </Quality>    
+      <Quality name="Harmonic">
+        <Parameter name="HarmonicCentroid" value="1/4" round="0" shift="multiply"/>
+	<Parameter name="GlobalAmplitude" value="1/8" concavity="2"/>
+      </Quality>
+		<UseHarmonicSweep range="8" spread="0"/>
+      <!-- <KeyDownHoldoff delay=".05" scaler="0.5"/> -->
+    </RealTimeQualities>
+  </Patch>
+
+  <Patch name="harmonic-up2-bendable" class="RealTimeMidiNote"> <!-- UseHarmonicSweep -->
+    <VelocityCurve>2</VelocityCurve>
+    <Synth class="PllSynth">
+      <Parameter name="GlobalAmplitude" value="-25dB/-25dB"/>
+      <Parameter name="HarmonicAmplitudes" value="1"/>
+      <!-- <Parameter name="LoopGain" value="100000"/> -->
+    </Synth>
+    <RealTimeQualities>
+      <Quality name="Intensity">
+		<Parameter name="HarmonicAmplitudes" value="0"/>
+	 	<Parameter name="GlobalAmplitude" value="-55dB/-15dB" concavity="0" mode="exp"/>
+      </Quality>
+      <Quality name="Brightness">
+        <Vibrato weight="0" clipLower="false" clipUpper="false"/>
+      </Quality>     
+      <Quality name="Pitch">
+        <Parameter name="RelativeFrequency" value="1/2" mode="exp"/>
+	<Parameter name="LoopGain" value="0/0" concavity="-1000"/>
+        <Vibrato weight=".12" clipLower="false" clipUpper="false"/>
+      </Quality>    
+      <Quality name="Harmonic">
+        <Parameter name="HarmonicCentroid" value="1/4" round="0" shift="multiply"/>
+	<Parameter name="GlobalAmplitude" value="1/8" concavity="2"/>
+      </Quality>
+		<UseHarmonicSweep range="10" spread="0" usePitchBend="true"/>
+      <!-- <KeyDownHoldoff delay=".05" scaler="0.5"/> -->
+    </RealTimeQualities>
+  </Patch>
+
+
+  <Patch name="harmonic-down2" class="RealTimeMidiNote"> <!-- UseHarmonicSweep -->
+    <VelocityCurve>2</VelocityCurve>
+    <Synth class="PllSynth">
+      <Parameter name="GlobalAmplitude" value="-25dB/-25dB"/>
+      <Parameter name="HarmonicAmplitudes" value="1"/>
+      <!-- <Parameter name="LoopGain" value="100000"/> -->
+    </Synth>
+    <RealTimeQualities>
+      <Quality name="Intensity">
+		<Parameter name="HarmonicAmplitudes" value="0"/>
+	 	<Parameter name="GlobalAmplitude" value="-55dB/-15dB" concavity="0" mode="exp"/>
+      </Quality>
+      <Quality name="Brightness">
+        <Vibrato weight="0" clipLower="false" clipUpper="false"/>
+      </Quality>     
+      <Quality name="Pitch">
+        <Parameter name="RelativeFrequency" value="1/2" mode="exp"/>
+	<Parameter name="LoopGain" value="0/0" concavity="-1000"/>
+        <Vibrato weight=".059" clipLower="false" clipUpper="false"/>
+      </Quality>    
+      <Quality name="Harmonic">
+        <Parameter name="HarmonicCentroid" value="1/4" round="0" shift="multiply"/>
+	<Parameter name="GlobalAmplitude" value="1/8" concavity="2"/>
+      </Quality>
+		<UseHarmonicSweep range="-10"/>
+    </RealTimeQualities>
+  </Patch>
+  <Patch name="harmonic-up3" class="RealTimeMidiNote"> <!-- UseHarmonicSweep -->
+    <VelocityCurve>2</VelocityCurve>
+    <Synth class="PllSynth">
+      <Parameter name="GlobalAmplitude" value="-25dB/-25dB"/>
+      <Parameter name="HarmonicAmplitudes" value="1"/>
+      <!-- <Parameter name="LoopGain" value="100000"/> -->
+    </Synth>
+    <RealTimeQualities>
+      <Quality name="Intensity">
+		<Parameter name="HarmonicAmplitudes" value="0"/>
+	 	<Parameter name="GlobalAmplitude" value="-55dB/-15dB" concavity="0" mode="exp"/>
+      </Quality>
+      <Quality name="Brightness">
+        <Vibrato weight="0" clipLower="false" clipUpper="false"/>
+      </Quality>     
+      <Quality name="Pitch">
+        <Parameter name="RelativeFrequency" value="1/2" mode="exp"/>
+	<Parameter name="LoopGain" value="0/0" concavity="-1000"/>
+        <Vibrato weight=".059" clipLower="false" clipUpper="false"/>
+      </Quality>    
+      <Quality name="Harmonic">
+        <Parameter name="HarmonicCentroid" value="1/4" round="0" shift="multiply"/>
+	<Parameter name="GlobalAmplitude" value="1/8" concavity="2"/>
+      </Quality>
+		<UseHarmonicSweep range="10" spread="1"/>
+      <!-- <KeyDownHoldoff delay=".05" scaler="0.5"/> -->
+    </RealTimeQualities>
+  </Patch>
+  <Patch name="harmonic-down3" class="RealTimeMidiNote"> <!-- UseHarmonicSweep -->
+    <VelocityCurve>2</VelocityCurve>
+    <Synth class="PllSynth">
+      <Parameter name="GlobalAmplitude" value="-25dB/-25dB"/>
+      <Parameter name="HarmonicAmplitudes" value="1"/>
+      <!-- <Parameter name="LoopGain" value="100000"/> -->
+    </Synth>
+    <RealTimeQualities>
+      <Quality name="Intensity">
+		<Parameter name="HarmonicAmplitudes" value="0"/>
+	 	<Parameter name="GlobalAmplitude" value="-55dB/-15dB" concavity="0" mode="exp"/>
+      </Quality>
+      <Quality name="Brightness">
+        <Vibrato weight="0" clipLower="false" clipUpper="false"/>
+      </Quality>     
+      <Quality name="Pitch">
+        <Parameter name="RelativeFrequency" value="1/2" mode="exp"/>
+	<Parameter name="LoopGain" value="0/0" concavity="-1000"/>
+        <Vibrato weight=".059" clipLower="false" clipUpper="false"/>
+      </Quality>    
+      <Quality name="Harmonic">
+        <Parameter name="HarmonicCentroid" value="1/4" round="0" shift="multiply"/>
+	<Parameter name="GlobalAmplitude" value="1/8" concavity="2"/>
+      </Quality>
+		<UseHarmonicSweep range="-10" spread="1"/>
+    </RealTimeQualities>
+  </Patch>
+  <Patch name="harmonic-up4" class="RealTimeMidiNote"> <!-- UseHarmonicSweep -->
+    <VelocityCurve>2</VelocityCurve>
+    <Synth class="PllSynth">
+      <Parameter name="GlobalAmplitude" value="-25dB/-25dB"/>
+      <Parameter name="HarmonicAmplitudes" value="1"/>
+      <!-- <Parameter name="LoopGain" value="100000"/> -->
+    </Synth>
+    <RealTimeQualities>
+      <Quality name="Intensity">
+		<Parameter name="HarmonicAmplitudes" value="0"/>
+	 	<Parameter name="GlobalAmplitude" value="-55dB/-15dB" concavity="0" mode="exp"/>
+      </Quality>
+      <Quality name="Brightness">
+        <Vibrato weight="0" clipLower="false" clipUpper="false"/>
+      </Quality>     
+      <Quality name="Pitch">
+        <Parameter name="RelativeFrequency" value="1/2" mode="exp"/>
+	<Parameter name="LoopGain" value="0/0" concavity="-1000"/>
+        <Vibrato weight=".059" clipLower="false" clipUpper="false"/>
+      </Quality>    
+      <Quality name="Harmonic">
+        <Parameter name="HarmonicCentroid" value="1/4" round="0" shift="multiply"/>
+	<Parameter name="GlobalAmplitude" value="1/8" concavity="2"/>
+      </Quality>
+		<UseHarmonicSweep range="10" spread="2"/>
+      <!-- <KeyDownHoldoff delay=".05" scaler="0.5"/> -->
+    </RealTimeQualities>
+  </Patch>
+  <Patch name="harmonic-down4" class="RealTimeMidiNote"> <!-- UseHarmonicSweep -->
+    <VelocityCurve>2</VelocityCurve>
+    <Synth class="PllSynth">
+      <Parameter name="GlobalAmplitude" value="-25dB/-25dB"/>
+      <Parameter name="HarmonicAmplitudes" value="1"/>
+      <!-- <Parameter name="LoopGain" value="100000"/> -->
+    </Synth>
+    <RealTimeQualities>
+      <Quality name="Intensity">
+		<Parameter name="HarmonicAmplitudes" value="0"/>
+	 	<Parameter name="GlobalAmplitude" value="-55dB/-15dB" concavity="0" mode="exp"/>
+      </Quality>
+      <Quality name="Brightness">
+        <Vibrato weight="0" clipLower="false" clipUpper="false"/>
+      </Quality>     
+      <Quality name="Pitch">
+        <Parameter name="RelativeFrequency" value="1/2" mode="exp"/>
+	<Parameter name="LoopGain" value="0/0" concavity="-1000"/>
+        <Vibrato weight=".059" clipLower="false" clipUpper="false"/>
+      </Quality>    
+      <Quality name="Harmonic">
+        <Parameter name="HarmonicCentroid" value="1/4" round="0" shift="multiply"/>
+	<Parameter name="GlobalAmplitude" value="1/8" concavity="2"/>
+      </Quality>
+		<UseHarmonicSweep range="-12" spread="2"/>
+    </RealTimeQualities>
+  </Patch>
+
+  <Patch name="harmonic-up-extended" class="RealTimeMidiNote"> <!-- UseHarmonicSweep -->
+    <VelocityCurve>2</VelocityCurve>
+    <Synth class="PllSynth">
+      <Parameter name="GlobalAmplitude" value="-25dB/-25dB"/>
+      <Parameter name="HarmonicAmplitudes" value="1"/>
+      <!-- <Parameter name="LoopGain" value="100000"/> -->
+    </Synth>
+    <RealTimeQualities>
+      <Quality name="Intensity">
+		<Parameter name="HarmonicAmplitudes" value="0"/>
+	 	<Parameter name="GlobalAmplitude" value="-55dB/-10dB" concavity="0" mode="exp"/>
+      </Quality>
+      <Quality name="Brightness">
+        <Vibrato weight="0" clipLower="false" clipUpper="false"/>
+      </Quality>     
+      <Quality name="Pitch">
+        <Parameter name="RelativeFrequency" value="1/2" mode="exp"/>
+	<Parameter name="LoopGain" value="0/0" concavity="-1000"/>
+        <Vibrato weight=".059" clipLower="false" clipUpper="false"/>
+      </Quality>    
+      <Quality name="Harmonic">
+        <Parameter name="HarmonicCentroid" value="1/4" round="0" shift="multiply"/>
+	<Parameter name="GlobalAmplitude" value="1/8" concavity="2"/>
+      </Quality>
+		<UseHarmonicSweep range="32" spread="0"/>
+      <!-- <KeyDownHoldoff delay=".05" scaler="0.5"/> -->
+    </RealTimeQualities>
+  </Patch>
+
+  <Patch name="test20low" class="RealTimeMidiNote">
+    <VelocityCurve>2</VelocityCurve>
+    <Synth class="PllSynth">
+      <Parameter name="GlobalAmplitude" value="-25dB/-25dB"/>
+      <Parameter name="HarmonicAmplitudes" value="1"/>
+      <Parameter name="LoopGain" value="100000"/>
+    </Synth>
+    <RealTimeQualities>
+      <Quality name="Intensity">
+		<Parameter name="HarmonicAmplitudes" value="1,.5,.5,.25,.125,.0625,.0625,.05"/>
+	 	<Parameter name="GlobalAmplitude" value="-55dB/-10dB" concavity="0" mode="exp"/>
+      </Quality>
+      <Quality name="Brightness">
+	    <Parameter name="GlobalAmplitude" value="1/2" concavity="0"/>
+		<Parameter name="HarmonicAmplitudes" value="0"/>
+	    <Parameter name="HarmonicCentroid" value="1/4" round="1" shift="multiply"/>		
+        <Vibrato weight="0" clipLower="false" clipUpper="false"/>
+      </Quality>
+      <Quality name="Pitch">
+        <Parameter name="RelativeFrequency" value="1/1.059" mode="exp"/>
+		<Parameter name="LoopGain" value="0/0" concavity="-1000"/>
+	    <Parameter name="GlobalAmplitude" value="1/8" concavity="0" mode="abs"/>
+		<Parameter name="HarmonicAmplitudes" value="0/0,0/.125,0/.125,0/.0625,0/.125,0/.125,0/.125,0/.125" concavity="-5" mode="abs"/>
+        <Vibrato weight=".99" clipLower="false" clipUpper="false"/>
+      </Quality>
+      <Quality name="Harmonic">
+        <Parameter name="HarmonicCentroid" value="1/4" round="0" shift="multiply"/>
+        <Parameter name="HarmonicAmplitudes" value="0/0,0/-.25,0/-.125,0/-.0625"/>
+		<Parameter name="GlobalAmplitude" value="1/16" concavity="-2"/>
+      </Quality>
+    </RealTimeQualities>
+  </Patch>
+  <Patch name="test20low-bright" class="RealTimeMidiNote">
+    <VelocityCurve>2</VelocityCurve>
+    <Synth class="PllSynth">
+      <Parameter name="GlobalAmplitude" value="-25dB/-25dB"/>
+      <Parameter name="HarmonicAmplitudes" value="1"/>
+      <Parameter name="LoopGain" value="100000"/>
+    </Synth>
+    <RealTimeQualities>
+      <Quality name="Intensity">
+		<Parameter name="HarmonicAmplitudes" value="1,.5,.5,.5,.2,.4,.07,.05,.03,.02,.01"/>
+	 	<Parameter name="GlobalAmplitude" value="-55dB/-10dB" concavity="0" mode="exp"/>
+      </Quality>
+      <Quality name="Brightness">
+	    <Parameter name="GlobalAmplitude" value="1/2" concavity="0"/>
+		<Parameter name="HarmonicAmplitudes" value="0"/>
+	    <Parameter name="HarmonicCentroid" value="1/4" round="1" shift="multiply"/>		
+        <Vibrato weight="0" clipLower="false" clipUpper="false"/>
+      </Quality>
+      <Quality name="Pitch">
+        <Parameter name="RelativeFrequency" value="1/1.059" mode="exp"/>
+		<Parameter name="LoopGain" value="0/0" concavity="-1000"/>
+	    <Parameter name="GlobalAmplitude" value="1/8" concavity="0" mode="abs"/>
+		<Parameter name="HarmonicAmplitudes" value="0/0,0/.125,0/.125,0/.0625,0/.125,0/.125,0/.125,0/.125" concavity="-5" mode="abs"/>
+        <Vibrato weight=".99" clipLower="false" clipUpper="false"/>
+      </Quality>
+      <Quality name="Harmonic">
+        <Parameter name="HarmonicCentroid" value="1/4" round="0" shift="multiply"/>
+        <Parameter name="HarmonicAmplitudes" value="0/0,0/-.25,0/-.125,0/-.0625"/>
+		<Parameter name="GlobalAmplitude" value="1/16" concavity="-2"/>
+      </Quality>
+    </RealTimeQualities>
+  </Patch>
+  <Patch name="test20mid" class="RealTimeMidiNote">
+    <VelocityCurve>2</VelocityCurve>
+    <Synth class="PllSynth">
+      <Parameter name="GlobalAmplitude" value="-25dB/-25dB"/>
+      <Parameter name="HarmonicAmplitudes" value="1"/>
+      <Parameter name="LoopGain" value="100000"/>
+    </Synth>
+    <RealTimeQualities>
+      <Quality name="Intensity">
+		<Parameter name="HarmonicAmplitudes" value="1,.25,.125,.0625"/>
+	 	<Parameter name="GlobalAmplitude" value="-55dB/-16dB" concavity="0" mode="exp"/>
+      </Quality>
+      <Quality name="Brightness">
+	    <Parameter name="GlobalAmplitude" value="1/2" concavity="0"/>
+		<Parameter name="HarmonicAmplitudes" value="0"/>
+	    <Parameter name="HarmonicCentroid" value="1/4" round="1" shift="multiply"/>		
+        <Vibrato weight="0" clipLower="false" clipUpper="false"/>
+      </Quality>
+      <Quality name="Pitch">
+        <Parameter name="RelativeFrequency" value="1/1.059" mode="exp"/>
+		<Parameter name="LoopGain" value="0/0" concavity="-1000"/>
+	    <Parameter name="GlobalAmplitude" value="1/8" concavity="0" mode="abs"/>
+		<Parameter name="HarmonicAmplitudes" value="0/0,0/.125,0/.125,0/.0625,0/.125,0/.125,0/.125,0/.125" concavity="-5" mode="abs"/>
+        <Vibrato weight=".99" clipLower="false" clipUpper="false"/>
+      </Quality>
+      <Quality name="Harmonic">
+        <Parameter name="HarmonicCentroid" value="1/4" round="0" shift="multiply"/>
+        <Parameter name="HarmonicAmplitudes" value="0/0,0/-.25,0/-.125,0/-.0625"/>
+		<Parameter name="GlobalAmplitude" value="1/16" concavity="-2"/>
+      </Quality>
+    </RealTimeQualities>
+  </Patch>
+  <Patch name="test20hi" class="RealTimeMidiNote">
+    <VelocityCurve>2</VelocityCurve>
+    <Synth class="PllSynth">
+      <Parameter name="GlobalAmplitude" value="-25dB/-25dB"/>
+      <Parameter name="HarmonicAmplitudes" value="1"/>
+      <Parameter name="LoopGain" value="100000"/>
+    </Synth>
+    <RealTimeQualities>
+      <Quality name="Intensity">
+		<Parameter name="HarmonicAmplitudes" value="1,.25,.125,.0625"/>
+	 	<Parameter name="GlobalAmplitude" value="-55dB/-22dB" concavity="0" mode="exp"/>
+      </Quality>
+      <Quality name="Brightness">
+	    <Parameter name="GlobalAmplitude" value="1/2" concavity="0"/>
+		<Parameter name="HarmonicAmplitudes" value="0"/>
+	    <Parameter name="HarmonicCentroid" value="1/4" round="1" shift="multiply"/>		
+        <Vibrato weight="0" clipLower="false" clipUpper="false"/>
+      </Quality>
+      <Quality name="Pitch">
+        <Parameter name="RelativeFrequency" value="1/1.059" mode="exp"/>
+		<Parameter name="LoopGain" value="0/0" concavity="-1000"/>
+	    <Parameter name="GlobalAmplitude" value="1/8" concavity="0" mode="abs"/>
+		<Parameter name="HarmonicAmplitudes" value="0/0,0/.125,0/.125,0/.0625,0/.125,0/.125,0/.125,0/.125" concavity="-5" mode="abs"/>
+        <Vibrato weight=".99" clipLower="false" clipUpper="false"/>
+      </Quality>
+      <Quality name="Harmonic">
+        <Parameter name="HarmonicCentroid" value="1/4" round="0" shift="multiply"/>
+        <Parameter name="HarmonicAmplitudes" value="0/0,0/-.25,0/-.125,0/-.0625"/>
+		<Parameter name="GlobalAmplitude" value="1/16" concavity="-2"/>
+      </Quality>
+    </RealTimeQualities>
+  </Patch>
+
+  <Patch name="beats-fast" class="RealTimeMidiNote">
+    <VelocityCurve>2</VelocityCurve>
+    <Synth class="PllSynth">
+      <Parameter name="GlobalAmplitude" value="-20dB/-20dB"/>
+      <Parameter name="HarmonicAmplitudes" value="1"/>
+      <Parameter name="LoopGain" value="0"/>
+	  <Parameter name="RelativeFrequency" value="1"/>
+    </Synth>
+    <Synth class="PllSynth">
+      <Parameter name="GlobalAmplitude" value="-20dB/-20dB"/>
+      <Parameter name="HarmonicAmplitudes" value="1"/>
+      <Parameter name="LoopGain" value="0"/>
+	  <Parameter name="RelativeFrequency" value="1"/>
+    </Synth>
+    <RealTimeQualities>
+      <Quality name="Intensity">
+		<Parameter name="HarmonicAmplitudes" value="1"/>
+	 	<Parameter name="GlobalAmplitude" value="-20db/-20db" concavity="0" mode="exp"/>
+        <Parameter name="LoopGain" value="0"/>
+	    <Parameter name="RelativeFrequency" value="1.01/1.04"/>
+      </Quality>
+      <Quality name="Brightness">
+		<Parameter name="HarmonicAmplitudes" value="0"/>
+        <Vibrato weight="0" clipLower="false" clipUpper="false"/>
+      </Quality>     
+      <Quality name="Pitch">
+        <Parameter name="RelativeFrequency" value="1/2" mode="exp"/>
+	    <Parameter name="LoopGain" value="0/0" concavity="-1000"/>
+        <Vibrato weight=".059" clipLower="false" clipUpper="false"/>
+      </Quality>    
+      <Quality name="Harmonic">
+        <Parameter name="HarmonicCentroid" value="1/4" round="0" shift="multiply"/>
+	    <Parameter name="GlobalAmplitude" value="1/8" concavity="2"/>
+      </Quality>
+    </RealTimeQualities>
+  </Patch>
+  <Patch name="beats-medium" class="RealTimeMidiNote">
+    <VelocityCurve>2</VelocityCurve>
+    <Synth class="PllSynth">
+      <Parameter name="GlobalAmplitude" value="-20dB/-20dB"/>
+      <Parameter name="HarmonicAmplitudes" value="1"/>
+      <Parameter name="LoopGain" value="0"/>
+	  <Parameter name="RelativeFrequency" value="1"/>
+    </Synth>
+    <Synth class="PllSynth">
+      <Parameter name="GlobalAmplitude" value="-20dB/-20dB"/>
+      <Parameter name="HarmonicAmplitudes" value="1"/>
+      <Parameter name="LoopGain" value="0"/>
+	  <Parameter name="RelativeFrequency" value="1"/>
+    </Synth>
+    <RealTimeQualities>
+      <Quality name="Intensity">
+		<Parameter name="HarmonicAmplitudes" value="1"/>
+	 	<Parameter name="GlobalAmplitude" value="-20db/-20db" concavity="0" mode="exp"/>
+        <Parameter name="LoopGain" value="0"/>
+	    <Parameter name="RelativeFrequency" value="1.005/1.02"/>
+      </Quality>
+      <Quality name="Brightness">
+		<Parameter name="HarmonicAmplitudes" value="0"/>
+        <Vibrato weight="0" clipLower="false" clipUpper="false"/>
+      </Quality>     
+      <Quality name="Pitch">
+        <Parameter name="RelativeFrequency" value="1/2" mode="exp"/>
+	    <Parameter name="LoopGain" value="0/0" concavity="-1000"/>
+        <Vibrato weight=".059" clipLower="false" clipUpper="false"/>
+      </Quality>    
+      <Quality name="Harmonic">
+        <Parameter name="HarmonicCentroid" value="1/4" round="0" shift="multiply"/>
+	    <Parameter name="GlobalAmplitude" value="1/8" concavity="2"/>
+      </Quality>
+    </RealTimeQualities>
+  </Patch>
+  <Patch name="beats-slow" class="RealTimeMidiNote">
+    <VelocityCurve>2</VelocityCurve>
+    <Synth class="PllSynth">
+      <Parameter name="GlobalAmplitude" value="-20dB/-20dB"/>
+      <Parameter name="HarmonicAmplitudes" value="1"/>
+      <Parameter name="LoopGain" value="0"/>
+	  <Parameter name="RelativeFrequency" value="1"/>
+    </Synth>
+    <Synth class="PllSynth">
+      <Parameter name="GlobalAmplitude" value="-20dB/-20dB"/>
+      <Parameter name="HarmonicAmplitudes" value="1"/>
+      <Parameter name="LoopGain" value="0"/>
+	  <Parameter name="RelativeFrequency" value="1"/>
+    </Synth>
+    <RealTimeQualities>
+      <Quality name="Intensity">
+		<Parameter name="HarmonicAmplitudes" value="1"/>
+	 	<Parameter name="GlobalAmplitude" value="-20db/-20db" concavity="0" mode="exp"/>
+        <Parameter name="LoopGain" value="0"/>
+	    <Parameter name="RelativeFrequency" value="1.0025/1.01"/>
+      </Quality>
+      <Quality name="Brightness">
+		<Parameter name="HarmonicAmplitudes" value="0"/>
+        <Vibrato weight="0" clipLower="false" clipUpper="false"/>
+      </Quality>     
+      <Quality name="Pitch">
+        <Parameter name="RelativeFrequency" value="1/2" mode="exp"/>
+	    <Parameter name="LoopGain" value="0/0" concavity="-1000"/>
+        <Vibrato weight=".059" clipLower="false" clipUpper="false"/>
+      </Quality>    
+      <Quality name="Harmonic">
+        <Parameter name="HarmonicCentroid" value="1/4" round="0" shift="multiply"/>
+	    <Parameter name="GlobalAmplitude" value="1/8" concavity="2"/>
+      </Quality>
+    </RealTimeQualities>
+  </Patch>
+
+  <Patch name="sweep" class="MidiNote">
+    <Synth class="PllSynth">
+	  <Parameter name="LoopGain" value="0"/>
+      <Parameter name="GlobalAmplitude" value="-10db"/>
+      <Parameter name="HarmonicAmplitudes" value="1"/>
+      <Parameter name="RelativeFrequency" value="1">
+        <Ramp value="2" duration=".13" type="step"/>
+        <Ramp value="3" duration=".13" type="step"/>
+        <Ramp value="4" duration=".13" type="step"/>
+        <Ramp value="5" duration=".1" type="step"/>
+        <Ramp value="6" duration=".1" type="step"/>
+        <Ramp value="7" duration=".1" type="step"/>
+        <Ramp value="8" duration=".1" type="step"/>
+      </Parameter>
+    </Synth>  
+  </Patch>
+  <Patch name="sweep2" class="MidiNote">
+    <Synth class="PllSynth">
+	  <Parameter name="LoopGain" value="0"/>
+      <Parameter name="GlobalAmplitude" value="-10db"/>
+      <Parameter name="HarmonicAmplitudes" value="1"/>
+      <Parameter name="RelativeFrequency" value="1">
+        <Ramp value="2" duration=".1" type="step"/>
+        <Ramp value="3" duration=".1" type="step"/>
+        <Ramp value="4" duration=".1" type="step"/>
+        <Ramp value="5" duration=".1" type="step"/>
+        <Ramp value="6" duration=".1" type="step"/>
+        <Ramp value="7" duration=".1" type="step"/>
+        <Ramp value="8" duration=".1" type="step"/>
+      </Parameter>
+    </Synth>  
+  </Patch>  
+  <Patch name="mvt2-1" class="MidiNote">
+    <Synth class="PllSynth">
+	  <Parameter name="LoopGain" value="100000"/>
+      <Parameter name="GlobalAmplitude" value="-25db"/>
+      <Parameter name="HarmonicAmplitudes" value="1"/>
+      <Parameter name="RelativeFrequency" value="1">
+        <Ramp value="2" duration="1" type="step"/>
+        <Ramp value="3" duration=".25" type="step"/>
+        <Ramp value="4" duration=".25" type="step"/>
+        <Ramp value="5" duration=".25" type="step"/>
+        <Ramp value="6" duration=".25" type="step"/>
+        <Ramp value="7" duration=".25" type="step"/>
+        <Ramp value="8" duration=".25" type="step"/>
+      </Parameter>
+    </Synth>  
+    <Synth class="PllSynth">
+	  <Parameter name="LoopGain" value="0"/>
+      <Parameter name="GlobalAmplitude" value="-40db">
+	    <Ramp value="-20db" duration="1" type="step"/>
+	  </Parameter>
+      <Parameter name="HarmonicAmplitudes" value="1"/>
+      <Parameter name="RelativeFrequency" value="1">
+        <Ramp value="2" duration="1" type="step"/>
+        <Ramp value="3" duration=".5" type="step"/>
+        <Ramp value="4" duration=".5" type="step"/>
+        <Ramp value="5" duration=".25" type="step"/>
+        <Ramp value="6" duration=".2" type="step"/>
+        <Ramp value="7" duration=".15" type="step"/>
+        <Ramp value="8" duration=".1" type="step"/>
+      </Parameter>
+    </Synth>
+  </Patch>
+  <Patch name="mvt5-1" class="MidiNote">
+    <Synth class="PllSynth">
+      <Parameter name="LoopGain" value="100000"/>
+      <Parameter name="UseInterferenceRejection" value="true"/>
+      <Parameter name="UseAmplitudeFeedback" value="false"/>
+      <Parameter name="GlobalAmplitude" value="-22dB"/>
+	  <Parameter name="HarmonicAmplitudes" value="0,1,1,0,1,0,.2,0,.1,0,.05"/>
+    </Synth>
+  </Patch>
+  <Patch name="mvt4-piano-noncresc-1" class="MidiNote">
+    <Synth class="PllSynth">
+      <Parameter name="LoopGain" value="0"/>
+      <Parameter name="UseInterferenceRejection" value="true"/>
+      <Parameter name="UseAmplitudeFeedback" value="true"/>
+      <Parameter name="GlobalAmplitude" value="-10dB"/>
+	  <Parameter name="HarmonicAmplitudes" value="1,0,0,.5"/>
+	  <Parameter name="RelativeFrequency" value="1"/>
+      <Parameter name="AmplitudeFeedbackScaler" value="20"/>
+    </Synth>
+  </Patch>
+
+
+	<PatchTable>
+	  <Program id="0"> <!-- m. 1, m. 19 -->
+	    <Channel id="0">
+	      <Patch>basic</Patch>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>harmonic-down2</Patch>
+	      <Range>36-48</Range>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>harmonic-up2-med</Patch>
+	      <Range>49-63</Range>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>test20hi</Patch>
+	      <Range>64-84</Range>
+	    </Channel>
+            <Channel id="15">
+              <Patch>harmonic-up-extended</Patch>
+              <Range>28</Range>
+            </Channel>
+            <ProgramChange note="68" channel="15" program="1"/>
+            <ProgramChange note="54" channel="15" program="2"/>
+            <ProgramChange note="23" channel="15" program="4"/>
+        <ProgramChange note="105" channel="15" program="4"/>	
+        <ProgramChange note="106" channel="15" program="+"/>
+        <ProgramChange note="107" channel="15" program="1"/>
+	  </Program>
+	  <Program id="1"> <!-- m. 16, m. 46 -->
+	    <Channel id="0">
+	      <Patch>basic</Patch>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>test20low</Patch>
+			<Range>21-45</Range>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>test20low-bright</Patch>
+			<Range>28</Range>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>test20mid</Patch>
+			<Range>46-68</Range>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>test20hi</Patch>
+			<Range>69-108</Range>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>test20hi</Patch>
+			<Range>70,82</Range>
+              <Priority>1</Priority>
+	    </Channel>
+        <ProgramChange note="23" channel="15" program="4"/>
+        <ProgramChange note="51" channel="15" program="2"/>	
+        <ProgramChange note="35" channel="15" program="0"/>
+        <ProgramChange note="105" channel="15" program="4"/>	
+        <ProgramChange note="106" channel="15" program="+"/>
+        <ProgramChange note="107" channel="15" program="1"/>
+        <ProgramChange note="108" channel="15" program="0"/>
+	  </Program>
+	  <Program id="2"> <!-- m. 29 -->
+	    <Channel id="0">
+	      <Patch>basic</Patch>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>harmonic-down2</Patch>
+	      <Range>36-48</Range>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>harmonic-up2-med</Patch>
+	      <Range>49-50</Range>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>harmonic-up2-short</Patch>
+	      <Range>51-59</Range>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>test20hi</Patch>
+	      <Range>60-84</Range>
+	    </Channel>
+            <Channel id="15">
+              <Patch>harmonic-up-extended</Patch>
+              <Range>28</Range>
+            </Channel>
+	        <ProgramChange note="83" channel="15" program="1"/>
+	        <ProgramChange note="105" channel="15" program="4"/>	
+	        <ProgramChange note="106" channel="15" program="+"/>	
+	        <ProgramChange note="107" channel="15" program="1"/>
+	        <ProgramChange note="108" channel="15" program="0"/>
+	  </Program>
+	
+	  <Program id="4"> <!-- m. 51 -->
+	    <Channel id="0">
+	      <Patch>basic</Patch>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>harmonic-down2</Patch>
+	      <Range>36-48</Range>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>harmonic-up2</Patch>
+	      <Range>49-63</Range>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>test20hi</Patch>
+	      <Range>64-84</Range>
+	    </Channel>
+            <Channel id="15">
+              <Patch>harmonic-up-extended</Patch>
+              <Range>28</Range>
+            </Channel>
+	        <ProgramChange note="78" channel="15" program="5"/>
+	        <ProgramChange note="106" channel="15" program="+"/>	
+	        <ProgramChange note="107" channel="15" program="1"/>
+	        <ProgramChange note="108" channel="15" program="0"/>
+	  </Program>	
+	  <Program id="5"> <!-- m. 58 -->
+	    <Channel id="0">
+	      <Patch>basic</Patch>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>test20low</Patch>
+			<Range>21-45</Range>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>test20low-bright</Patch>
+			<Range>28</Range>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>test20mid</Patch>
+			<Range>46-68</Range>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>test20hi</Patch>
+			<Range>69-108</Range>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>test20hi</Patch>
+			<Range>70,82</Range>
+              <Priority>1</Priority>
+	    </Channel>
+        <ProgramChange note="47" channel="15" program="6"/>	
+        <ProgramChange note="105" channel="15" program="4"/>	
+        <ProgramChange note="106" channel="15" program="+"/>
+        <ProgramChange note="107" channel="15" program="1"/>
+        <ProgramChange note="108" channel="15" program="0"/>
+	  </Program>	
+	  <Program id="6"> <!-- m. 60 -->
+	    <Channel id="0">
+	      <Patch>basic</Patch>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>harmonic-down2</Patch>
+	      <Range>36-48</Range>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>harmonic-up2</Patch>
+	      <Range>49-63</Range>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>test20hi</Patch>
+	      <Range>64-84</Range>
+	    </Channel>
+            <Channel id="15">
+              <Patch>harmonic-up-extended</Patch>
+              <Range>28</Range>
+            </Channel>
+	        <ProgramChange note="72" channel="15" program="7"/>
+	        <ProgramChange note="84" channel="15" program="7"/>	
+	        <ProgramChange note="105" channel="15" program="4"/>		
+	        <ProgramChange note="106" channel="15" program="+"/>	
+	        <ProgramChange note="107" channel="15" program="1"/>
+	        <ProgramChange note="108" channel="15" program="0"/>
+	  </Program>	
+	  <Program id="7"> <!-- m. 62 -->
+	    <Channel id="0">
+	      <Patch>basic</Patch>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>test20low</Patch>
+			<Range>21-45</Range>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>test20low-bright</Patch>
+			<Range>28</Range>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>test20mid</Patch>
+			<Range>46-68</Range>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>test20hi</Patch>
+			<Range>69-108</Range>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>test20hi</Patch>
+			<Range>70,78,82</Range>
+              <Priority>1</Priority>
+	    </Channel>
+        <ProgramChange note="23" channel="15" program="8"/>	
+        <ProgramChange note="105" channel="15" program="4"/>	
+        <ProgramChange note="106" channel="15" program="+"/> 
+       <ProgramChange note="107" channel="15" program="1"/>
+        <ProgramChange note="108" channel="15" program="0"/>
+	  </Program>	
+	  <Program id="8"> <!-- m. 65 -->
+		<Channel id="15">
+		  <Patch>sweep2</Patch>
+		  <Range>37,40,42,45,47,49,52,54,57,59,61,64,66,69,71,73,76,78,81,83</Range>
+		</Channel>
+		<Channel id="15">
+		  <Patch>test20low</Patch>
+		  <Range>84</Range>
+		  <Priority>1</Priority>
+		</Channel>
+		<ProgramChange note="96" channel="15" program="9"/>
+        <ProgramChange note="105" channel="15" program="4"/>			
+        <ProgramChange note="106" channel="15" program="+"/>		
+        <ProgramChange note="107" channel="15" program="1"/>
+        <ProgramChange note="108" channel="15" program="0"/>		
+	  </Program>
+	  <Program id="9"> <!-- m. 66 -->
+	    <Channel id="0">
+	      <Patch>basic</Patch>
+	    </Channel>
+	    <Channel id="15">
+		<Patch>test20mid</Patch>
+		<Range>21-71</Range>
+	    </Channel>	
+	    <Channel id="15">
+		<Patch>test20low</Patch>
+		<Range>72-84</Range>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>test20low</Patch>
+			<Range>71,72,83,84</Range>
+              <Priority>1</Priority>
+	    </Channel>
+            <ProgramChange note="23" channel="15" program="10"/>
+	        <ProgramChange note="105" channel="15" program="4"/>	
+	        <ProgramChange note="106" channel="15" program="+"/>
+	        <ProgramChange note="107" channel="15" program="1"/>
+	        <ProgramChange note="108" channel="15" program="0"/>	
+	  </Program>
+	  <Program id="10"> <!-- p. 71 -->
+	    <Channel id="0">
+	      <Patch>basic</Patch>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>harmonic-down2</Patch>
+	      <Range>36-48</Range>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>harmonic-up2</Patch>
+	      <Range>49-75</Range>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>test20hi</Patch>
+	      <Range>76-82</Range>
+	    </Channel>
+            <Channel id="15">
+              <Patch>harmonic-up-extended</Patch>
+              <Range>28</Range>
+            </Channel>
+            <ProgramChange note="84" channel="15" program="11"/>
+	        <ProgramChange note="105" channel="15" program="4"/>	
+	        <ProgramChange note="106" channel="15" program="+"/>
+	        <ProgramChange note="107" channel="15" program="1"/>
+	        <ProgramChange note="108" channel="15" program="0"/>
+	  </Program>		
+	  <Program id="11"> <!-- m. 89 -->
+	    <Channel id="0">
+	      <Patch>basic</Patch>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>test20low</Patch>
+			<Range>21-45</Range>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>test20low-bright</Patch>
+			<Range>28</Range>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>test20mid</Patch>
+			<Range>46-68</Range>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>test20hi</Patch>
+			<Range>69-108</Range>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>test20hi</Patch>
+			<Range>70,82</Range>
+              <Priority>1</Priority>
+	    </Channel>
+        <ProgramChange note="105" channel="15" program="4"/>		
+        <ProgramChange note="107" channel="15" program="1"/>
+        <ProgramChange note="108" channel="15" program="0"/>
+	  </Program>
+	
+	  <Program id="+">
+	    <Channel id="0">
+	      <Patch>basic</Patch>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>sweep</Patch>
+		<Range>36-72</Range>
+	    </Channel>		
+            <ProgramChange note="64" channel="15" program="+"/>
+	    <ProgramChange note="108" channel="15" program="0"/>
+	  </Program>	
+	  <Program id="+">
+	    <Channel id="0">
+	      <Patch>basic</Patch>
+	    </Channel>
+	    <Channel id="15">
+		<Patch>test20mid</Patch>
+		<Range>21-71</Range>
+	    </Channel>	
+	    <Channel id="15">
+		<Patch>test20low</Patch>
+		<Range>72-84</Range>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>test20low</Patch>
+			<Range>71,72,83,84</Range>
+              <Priority>1</Priority>
+	    </Channel>
+            <ProgramChange note="23" channel="15" program="0"/>
+	    <ProgramChange note="107" channel="15" program="0"/>
+	  </Program>		
+
+
+	  <Program id="100"> <!-- m. 1, m. 19 -->
+	    <Channel id="0">
+	      <Patch>basic</Patch>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>harmonic-down2</Patch>
+	      <Range>36-48</Range>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>harmonic-up2</Patch>
+	      <Range>49-84</Range>
+	    </Channel>
+	    <!--<Channel id="15">
+	      <Patch>test20hi</Patch>
+	      <Range>64-84</Range>
+	    </Channel>-->
+            <Channel id="15">
+              <Patch>harmonic-up-extended</Patch>
+              <Range>28</Range>
+            </Channel>
+        <ProgramChange note="107" channel="15" program="101"/>
+        <ProgramChange note="22" channel="15" program="103"/>
+	  </Program>
+	  <Program id="101"> <!-- m. 16, m. 46 -->
+	    <Channel id="0">
+	      <Patch>basic</Patch>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>test20low</Patch>
+			<Range>21-45</Range>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>test20low-bright</Patch>
+			<Range>28</Range>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>test20low</Patch>
+			<Range>46-55</Range>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>test20low</Patch>
+			<Range>56-108</Range>
+	    </Channel>
+        <ProgramChange note="108" channel="15" program="100"/>
+        <ProgramChange note="22" channel="15" program="103"/>
+	  </Program>
+	  <Program id="102"> <!-- m. 16, m. 46 -->
+	    <Channel id="0">
+	      <Patch>basic</Patch>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>test20low-bright</Patch>
+			<Range>21-45</Range>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>test20low-bright</Patch>
+			<Range>28</Range>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>test20low-bright</Patch>
+			<Range>46-55</Range>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>test20low-bright</Patch>
+			<Range>56-108</Range>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>test20low-bright</Patch>
+			<Range>70,82</Range>
+              <Priority>1</Priority>
+	    </Channel>
+        <ProgramChange note="108" channel="15" program="100"/>
+        <ProgramChange note="22" channel="15" program="103"/>
+	  </Program>
+	<Program id="103">
+          <ProgramChange note="108" channel="15" program="100"/>
+          <ProgramChange note="107" channel="15" program="101"/>
+	</Program>
+	<Program id="104">
+		<Channel id="15">
+			<Patch>mvt5-1</Patch>
+		</Channel>
+	</Program>	
+	<Program id="105">
+		<Channel id="15">
+			<Patch>mvt4-piano-noncresc-1</Patch>
+		</Channel>
+	</Program>	
+          <Program id="+">
+            <ProgramChange note="23" channel="15" program="0"/>
+            <ProgramChange note="107" channel="15" program="10"/>
+          </Program>
+	  <Program id="+">
+	    <Channel id="0">
+	      <Patch>basic</Patch>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>test20low</Patch>
+			<Range>21-45</Range>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>test20mid</Patch>
+			<Range>46-55</Range>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>test20hi</Patch>
+			<Range>56-108</Range>
+	    </Channel>
+	    <ProgramChange note="21" channel="15" program="9"/> 
+	    <ProgramChange note="107" channel="15" program="11"/>
+	  </Program>
+	  <Program id="+">
+	    <Channel id="0">
+	      <Patch>basic</Patch>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>harmonic-down2</Patch>
+	      <Range>36-48</Range>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>harmonic-up2</Patch>
+	      <Range>49-84</Range>
+	    </Channel>
+            <Channel id="15">
+              <Patch>harmonic-up-extended</Patch>
+              <Range>28</Range>
+            </Channel>
+	    <ProgramChange note="21" channel="15" program="9"/>
+            <ProgramChange note="107" channel="15" program="10"/>
+	  </Program>
+	
+	
+	
+	  <Program id="+">
+		<Channel id="15">
+		  <Patch>sweep2</Patch>
+		  <Range>37,40,42,45,47,49,52,54,57,59,61,64,66,69,71,73,76,78,81,83</Range>
+		</Channel>
+		<Channel id="15">
+		  <Patch>test20low</Patch>
+		  <Range>84</Range>
+		</Channel>
+		<ProgramChange note="96" channel="15" program="3"/>
+	  </Program>
+
+	  <Program id="+">
+	    <Channel id="0">
+	      <Patch>basic</Patch>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>harmonic-down2</Patch>
+	      <Range>36-48</Range>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>harmonic-up2-short</Patch>
+	      <Range>49-59</Range>
+	    </Channel>
+	    <Channel id="15">
+	      <Patch>test20hi</Patch>
+	      <Range>60-84</Range>
+	    </Channel>
+            <Channel id="15">
+              <Patch>harmonic-up-extended</Patch>
+              <Range>28</Range>
+            </Channel>
+            <ProgramChange note="84" channel="15" program="+"/>
+	  </Program>
+
+	  <Program id="127">
+	   <Channel id="0">
+	     <Patch>calibrate</Patch>
+	   </Channel>
+	   <Channel id="15">
+	     <Patch>calibrate</Patch>
+	   </Channel>
+	  </Program>	
+	</PatchTable>
+
+  <StringMap>
+    <Map note="84-95" string="72-83"/>
+	<Map note="97-107" string="73-83"/>
+    <Map note="28" string="37"/>
+  </StringMap>
+
+  <GlobalControls>
+    <Control name="MasterVolume" id="12"/>
+    <Control name="PitchTrackInputMute" id="18" threshold="8"/>
+  </GlobalControls>
+</PatchTableRoot>

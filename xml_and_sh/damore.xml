@@ -1,0 +1,1065 @@
+<?xml version="1.0" standalone="yes"?>
+<PatchTableRoot>
+  <Patch name="arpeggio1" class="PitchTrackNote">
+    <Synth class="PitchTrackSynth">
+      <Parameter name="MaxGlobalAmplitude" value="-15db"/>
+      <Parameter name="DecayTimeConstant" value="0.5"/>
+      <Parameter name="InputRelativeFrequency" value="1"/>
+      <Parameter name="OutputRelativeFrequency" value="1"/>
+      <Parameter name="PitchFollowRange" value="1.05"/>
+      <Parameter name="PitchFollowRatio" value="0"/>
+      <Parameter name="InputGain" value="2"/>
+	  <Parameter name="HarmonicAmplitudes" value=".5,.5,0,.25,.1,.05"/>
+    </Synth>
+  </Patch>
+  <Patch name="follow1" class="PitchTrackNote">
+    <Synth class="PitchTrackSynth">
+      <Parameter name="MaxGlobalAmplitude" value="-15db"/>
+      <Parameter name="DecayTimeConstant" value=".5"/>
+      <Parameter name="InputRelativeFrequency" value="1"/>
+      <Parameter name="OutputRelativeFrequency" value="1"/>
+      <Parameter name="PitchFollowRange" value="1.05"/>
+      <Parameter name="PitchFollowRatio" value="1"/>
+      <Parameter name="InputGain" value="10"/>
+	  <Parameter name="HarmonicAmplitudes" value="1,.5,.25,.125,.0625,.03125"/>
+    </Synth>
+  </Patch>
+  <Patch name="sustain1" class="PitchTrackNote">
+    <Synth class="PitchTrackSynth">
+      <Parameter name="MaxGlobalAmplitude" value="-15db"/>
+      <Parameter name="DecayTimeConstant" value="4"/>
+      <Parameter name="InputRelativeFrequency" value="1"/>
+      <Parameter name="OutputRelativeFrequency" value="1"/>
+      <Parameter name="PitchFollowRange" value="1.05"/>
+      <Parameter name="PitchFollowRatio" value="0"/>
+      <Parameter name="InputGain" value="5"/>
+	  <Parameter name="HarmonicAmplitudes" value="1,.25,0,.1"/>
+    </Synth>
+  </Patch>
+  <Patch name="sustain2" class="PitchTrackNote">
+    <Synth class="PitchTrackSynth">
+      <Parameter name="MaxGlobalAmplitude" value="-15db"/>
+      <Parameter name="DecayTimeConstant" value="2.5"/>
+      <Parameter name="InputRelativeFrequency" value="1"/>
+      <Parameter name="OutputRelativeFrequency" value="1"/>
+      <Parameter name="PitchFollowRange" value="1.05"/>
+      <Parameter name="PitchFollowRatio" value="0"/>
+      <Parameter name="InputGain" value="5"/>
+	  <Parameter name="HarmonicAmplitudes" value="1,.25,0,.1"/>
+    </Synth>
+  </Patch>
+  <Patch name="sustain2-gliss" class="PitchTrackNote">
+    <Synth class="PitchTrackSynth">
+      <Parameter name="MaxGlobalAmplitude" value="-15db"/>
+      <Parameter name="DecayTimeConstant" value="2.5"/>
+      <Parameter name="InputRelativeFrequency" value="1"/>
+      <Parameter name="OutputRelativeFrequency" value="1"/>
+      <Parameter name="PitchFollowRange" value="1.2"/>
+      <Parameter name="PitchFollowRatio" value="0"/>
+      <Parameter name="InputGain" value="7"/>
+	  <Parameter name="HarmonicAmplitudes" value="1,.25,0,.1"/>
+    </Synth>
+  </Patch>  
+  <Patch name="sustain3" class="PitchTrackNote">
+    <Synth class="PitchTrackSynth">
+      <Parameter name="MaxGlobalAmplitude" value="-15db"/>
+      <Parameter name="DecayTimeConstant" value="1.5"/>
+      <Parameter name="InputRelativeFrequency" value="1"/>
+      <Parameter name="OutputRelativeFrequency" value="1"/>
+      <Parameter name="PitchFollowRange" value="1.05"/>
+      <Parameter name="PitchFollowRatio" value="0"/>
+      <Parameter name="InputGain" value="5"/>
+	  <Parameter name="HarmonicAmplitudes" value="1,.25,0,.1"/>
+    </Synth>
+  </Patch> 
+  <Patch name="sustain4" class="PitchTrackNote">
+    <Synth class="PitchTrackSynth">
+      <Parameter name="MaxGlobalAmplitude" value="-15db"/>
+      <Parameter name="DecayTimeConstant" value="0.5"/>
+      <Parameter name="InputRelativeFrequency" value="1"/>
+      <Parameter name="OutputRelativeFrequency" value="1"/>
+      <Parameter name="PitchFollowRange" value="1.05"/>
+      <Parameter name="PitchFollowRatio" value="0"/>
+      <Parameter name="InputGain" value="5"/>
+	  <Parameter name="HarmonicAmplitudes" value=".5,.5,.25,.1"/>
+    </Synth>
+  </Patch>    
+  <Patch name="follow2" class="PitchTrackNote">
+    <Synth class="PitchTrackSynth">
+      <Parameter name="MaxGlobalAmplitude" value="-15db"/>
+      <Parameter name="DecayTimeConstant" value=".5"/>
+      <Parameter name="InputRelativeFrequency" value="1"/>
+      <Parameter name="OutputRelativeFrequency" value="1"/>
+      <Parameter name="PitchFollowRange" value="1.05"/>
+      <Parameter name="PitchFollowRatio" value="1"/>
+      <Parameter name="InputGain" value="5"/>
+	  <Parameter name="HarmonicAmplitudes" value="1,.5,.25,.125,.0625,.03125"/>
+    </Synth>
+  </Patch>
+  <Patch name="hairpin1" class="PitchTrackNote">
+    <Synth class="PitchTrackSynth">
+      <Parameter name="MaxGlobalAmplitude" value="-60db">
+        <Ramp value="-25dB" duration="1" type="log"/>
+      </Parameter>
+      <Parameter name="MaxDuration" value="1.25"/>
+      <Parameter name="DecayTimeConstant" value=".5"/>
+      <Parameter name="InputRelativeFrequency" value="1"/>
+      <Parameter name="OutputRelativeFrequency" value="1"/>
+      <Parameter name="PitchFollowRange" value="1.05"/>
+      <Parameter name="PitchFollowRatio" value=".5"/>
+      <Parameter name="InputGain" value="-1"/>
+	  <Parameter name="HarmonicAmplitudes" value=".5,.5,.25,.125,.0625,.03125"/>	  
+    </Synth>
+  </Patch>
+  <Patch name="hairpin2" class="PitchTrackNote">
+    <Synth class="PitchTrackSynth">
+      <Parameter name="MaxGlobalAmplitude" value="-60db">
+        <Ramp value="-10dB" duration="3" type="log"/>
+		<Ramp value="-60db" duration="1" type="log"/>
+      </Parameter>
+      <Parameter name="MaxDuration" value="4"/>
+      <Parameter name="DecayTimeConstant" value=".5"/>
+      <Parameter name="InputRelativeFrequency" value="1"/>
+      <Parameter name="OutputRelativeFrequency" value="1"/>
+      <Parameter name="PitchFollowRange" value="1.05"/>
+      <Parameter name="PitchFollowRatio" value=".5"/>
+      <Parameter name="InputGain" value="-1"/>
+	  <Parameter name="HarmonicAmplitudes" value="0,1,1,0,1"/>
+    </Synth>
+  </Patch>  
+   <Patch name="hairpin3" class="PitchTrackNote">
+    <Synth class="PitchTrackSynth">
+      <Parameter name="MaxGlobalAmplitude" value="-60db">
+        <Ramp value="-10dB" duration="4" type="log"/>
+		<Ramp value="-60db" duration=".1" type="log"/>
+      </Parameter>
+      <Parameter name="MaxDuration" value="4.1"/>
+      <Parameter name="DecayTimeConstant" value=".5"/>
+      <Parameter name="InputRelativeFrequency" value="1"/>
+      <Parameter name="OutputRelativeFrequency" value="1"/>
+      <Parameter name="PitchFollowRange" value="1.05"/>
+      <Parameter name="PitchFollowRatio" value=".5"/>
+      <Parameter name="InputGain" value="-1"/>
+	  <Parameter name="HarmonicAmplitudes" value="0,1,1,0,1"/>
+    </Synth>
+  </Patch>   
+  <Patch name="hairpin4" class="PitchTrackNote">
+    <Synth class="PitchTrackSynth">
+      <Parameter name="MaxGlobalAmplitude" value="-60db">
+        <Ramp value="-10dB" duration="2" type="log"/>
+		<Ramp value="-60db" duration="1" type="log"/>
+      </Parameter>
+      <Parameter name="MaxDuration" value="3"/>
+      <Parameter name="DecayTimeConstant" value=".5"/>
+      <Parameter name="InputRelativeFrequency" value="1"/>
+      <Parameter name="OutputRelativeFrequency" value="1"/>
+      <Parameter name="PitchFollowRange" value="1.05"/>
+      <Parameter name="PitchFollowRatio" value=".5"/>
+      <Parameter name="InputGain" value="-1"/>
+	  <Parameter name="HarmonicAmplitudes" value="0,1,1,0,1"/>
+    </Synth>
+  </Patch>   
+  <Patch name="reverse1" class="PitchTrackNote">
+    <Synth class="PitchTrackSynth">
+      <Parameter name="MaxGlobalAmplitude" value="-10dB"/>
+      <Parameter name="DecayTimeConstant" value=".05"/>
+      <Parameter name="InputRelativeFrequency" value="1"/>
+      <Parameter name="OutputRelativeFrequency" value="1"/>
+      <Parameter name="PitchFollowRange" value="1.05"/>
+      <Parameter name="PitchFollowRatio" value="0"/>
+      <Parameter name="InputGain" value="3"/>
+	  <Parameter name="HarmonicAmplitudes" value=".5,.5,.25,.125,.0625,.03125"/>
+    </Synth>
+  </Patch>
+  <Patch name="reverse2" class="PitchTrackNote">
+    <Synth class="PitchTrackSynth">
+      <Parameter name="MaxGlobalAmplitude" value="-10dB"/>
+      <Parameter name="DecayTimeConstant" value="0.5"/>
+      <Parameter name="InputRelativeFrequency" value="1"/>
+      <Parameter name="OutputRelativeFrequency" value="1"/>
+      <Parameter name="PitchFollowRange" value="1.05"/>
+      <Parameter name="PitchFollowRatio" value="0"/>
+      <Parameter name="InputGain" value="3"/>
+	  <Parameter name="HarmonicAmplitudes" value=".5,.5,.25,.125,.0625,.03125"/>	  
+    </Synth>
+  </Patch>
+  <Patch name="reverse2-light" class="PitchTrackNote">
+    <Synth class="PitchTrackSynth">
+      <Parameter name="MaxGlobalAmplitude" value="-15dB"/>
+      <Parameter name="DecayTimeConstant" value="0.5"/>
+      <Parameter name="InputRelativeFrequency" value="1"/>
+      <Parameter name="OutputRelativeFrequency" value="1"/>
+      <Parameter name="PitchFollowRange" value="1.05"/>
+      <Parameter name="PitchFollowRatio" value="0"/>
+      <Parameter name="InputGain" value="2"/>
+	  <Parameter name="HarmonicAmplitudes" value=".5,.5,.25,.125,.0625,.03125"/>	  
+    </Synth>
+  </Patch>      
+  <Patch name="constant1" class="PitchTrackNote">
+    <Synth class="PitchTrackSynth">
+	  <Parameter name="MaxGlobalAmplitude" value="-15dB"/>
+	  <Parameter name="InputGain" value="-1"/>	  
+	</Synth>
+  </Patch>
+  <Patch name="amponly1" class="PitchTrackNote">
+    <Synth class="PitchTrackSynth">
+	  <Parameter name="MaxGlobalAmplitude" value="-10dB"/>
+      <Parameter name="DecayTimeConstant" value=".5"/>
+      <Parameter name="InputRelativeFrequency" value="1"/>
+      <Parameter name="OutputRelativeFrequency" value="1"/>
+      <Parameter name="PitchFollowRange" value="2"/>
+      <Parameter name="PitchFollowRatio" value="0"/>
+      <Parameter name="InputGain" value="5"/>	  
+	</Synth>
+  </Patch> 
+  <Patch name="amponly2" class="PitchTrackNote">
+    <Synth class="PitchTrackSynth">
+	  <Parameter name="MaxGlobalAmplitude" value="-15dB"/>
+      <Parameter name="DecayTimeConstant" value=".05"/>
+      <Parameter name="InputRelativeFrequency" value="1"/>
+      <Parameter name="OutputRelativeFrequency" value="1"/>
+      <Parameter name="PitchFollowRange" value="2"/>
+      <Parameter name="PitchFollowRatio" value="0"/>
+      <Parameter name="InputGain" value="5"/>	
+	  <Parameter name="HarmonicAmplitudes" value="0,.05,0,1,.5,.3,.1"/>  
+	</Synth>
+  </Patch>   
+  <Patch name="constant2" class="PitchTrackNote">
+    <Synth class="PitchTrackSynth">
+	  <Parameter name="MaxGlobalAmplitude" value="-25dB"/>
+	  <Parameter name="InputGain" value="-1"/>	  
+	</Synth>
+  </Patch> 
+  <Patch name="constant3" class="PitchTrackNote">
+    <Synth class="PitchTrackSynth">
+	  <Parameter name="MaxGlobalAmplitude" value="-30dB"/>
+	  <Parameter name="InputGain" value="-1"/>	  
+	  <Parameter name="HarmonicAmplitudes" value="1,0,0,.1,.05,.03,.02,.01"/>  	  
+	</Synth>
+  </Patch>  
+  <Patch name="hairpin-and-octave" class="PitchTrackNote">
+    <Synth class="PitchTrackSynth">
+      <Parameter name="MaxGlobalAmplitude" value="-60db">
+        <Ramp value="-10dB" duration="3" type="log"/>
+		<Ramp value="-30db" duration="1" type="log"/>
+      </Parameter>
+      <Parameter name="DecayTimeConstant" value=".5"/>
+      <Parameter name="InputRelativeFrequency" value="1"/>
+      <Parameter name="OutputRelativeFrequency" value="1"/>
+      <Parameter name="PitchFollowRange" value="1.05"/>
+      <Parameter name="PitchFollowRatio" value=".5"/>
+      <Parameter name="InputGain" value="-1"/>
+	  <Parameter name="HarmonicAmplitudes" value="1,0,.5,0">
+	    <Ramp value="0,1,0,.5" duration="6" type="step"/>
+	  </Parameter>
+    </Synth>
+  </Patch>   
+  <Patch name="flautando1" class="PitchTrackNote">
+    <Synth class="PitchTrackSynth">
+      <Parameter name="MaxGlobalAmplitude" value="-20db"/>
+      <Parameter name="DecayTimeConstant" value="2"/>
+      <Parameter name="InputRelativeFrequency" value="1"/>
+      <Parameter name="OutputRelativeFrequency" value="1"/>
+      <Parameter name="PitchFollowRange" value="1.05"/>
+      <Parameter name="PitchFollowRatio" value="0"/>
+      <Parameter name="InputGain" value="3"/>
+	  <Parameter name="HarmonicAmplitudes" value=".2,1,0,.5,0,.1"/>
+    </Synth>
+  </Patch> 
+  <Patch name="reverse-follow" class="PitchTrackNote">
+    <Synth class="PitchTrackSynth">
+      <Parameter name="MaxGlobalAmplitude" value="-10dB"/>
+      <Parameter name="DecayTimeConstant" value="0.5"/>
+      <Parameter name="InputRelativeFrequency" value="1"/>
+      <Parameter name="OutputRelativeFrequency" value="1"/>
+      <Parameter name="PitchFollowRange" value="1.05"/>
+      <Parameter name="PitchFollowRatio" value=".5"/>
+      <Parameter name="InputGain" value="3"/>
+    </Synth>
+  </Patch> 
+  <Patch name="harmonic-gliss" class="PitchTrackNote">
+    <Synth class="PitchTrackSynth">
+      <Parameter name="MaxGlobalAmplitude" value="-20dB">
+		<Ramp value="-10db" duration="2" type="log"/>
+	  </Parameter>	  
+	  <Parameter name="MaxDuration" value="6"/>
+      <Parameter name="DecayTimeConstant" value="4"/>
+      <Parameter name="InputRelativeFrequency" value="1"/>
+      <Parameter name="OutputRelativeFrequency" value="1">
+        <Ramp value="2" duration="1" type="step"/>
+        <Ramp value="3" duration=".5" type="step"/>
+        <Ramp value="4" duration=".5" type="log"/>
+      </Parameter>
+      <Parameter name="InputGain" value="-1"/>
+	  <!--<Parameter name="HarmonicAmplitudes" value="1,0,.3,0,.05,0,0,0">
+	    <Ramp value="0,1,0,.3,0,0,0,.05" duration="1" type="linear"/>
+		<Ramp value="0,0,0,1,0,0,0,.5" duration="1" type="linear"/>
+	  </Parameter>-->
+	  <Parameter name="HarmonicAmplitudes" value="1,.5,.3,.2,.1,.05,.03,.02"/>
+    </Synth>
+  </Patch>
+   <Patch name="harmonic-gliss2" class="PitchTrackNote">
+    <Synth class="PitchTrackSynth">
+      <Parameter name="MaxGlobalAmplitude" value="-20dB">
+		<Ramp value="-10db" duration="2" type="log"/>
+		<Ramp value="-20db" duration="1" type="log"/>
+	  </Parameter>	  
+      <Parameter name="DecayTimeConstant" value="4"/>
+      <Parameter name="InputRelativeFrequency" value="1"/>
+      <Parameter name="OutputRelativeFrequency" value="1">
+        <Ramp value="2" duration="1" type="step"/>
+        <Ramp value="3" duration=".5" type="step"/>
+        <Ramp value="4" duration=".5" type="log"/>
+		<Ramp value="4" duration="1" type="step"/>
+		<Ramp value="2" duration="2" type="log"/>
+      </Parameter>
+      <Parameter name="InputGain" value="-1"/>
+	  <Parameter name="HarmonicAmplitudes" value="1,.5,.3,.2,.1,.05,.03,.02"/>	  
+    </Synth>
+  </Patch> 
+
+  <PatchTable>
+    <Program id="+">	<!-- m. 1 -->
+      <PitchTrack>
+        <Patch>arpeggio1</Patch>
+        <Range>48,52,55,59,62,65,69,72,76,79,83</Range>
+        <Priority>0</Priority>
+      </PitchTrack>
+    </Program>
+    <Program id="+">	<!-- m. 3 -->
+      <PitchTrack>
+         <Patch>arpeggio1</Patch>
+         <Range>48,51,55,58,62,65,68,72,75,79,83</Range>
+         <!-- <NotesOff>all</NotesOff> -->
+      </PitchTrack>
+      <PitchTrack>
+         <Patch>follow1</Patch>
+         <Range>80</Range>
+      </PitchTrack>
+    </Program>
+    <Program id="+">	<!-- m. 5 -->
+      <PitchTrack>
+        <Patch>arpeggio1</Patch>
+        <Range>50,53,57,60,64,67,70,74,77,81,83</Range>
+		<NotesOff>all</NotesOff>
+        <!-- <NotesOff>48,51,55,58,62,65,68,72,75,79,83</NotesOff> -->
+      </PitchTrack>
+    </Program>
+    <Program id="+">	<!-- m. 7 -->
+      <PitchTrack>
+         <Patch>arpeggio1</Patch>
+         <Range>50,53,57,61,64,68,71,75,78,81</Range>
+         <!-- <NotesOff>all</NotesOff> -->
+      </PitchTrack>
+    </Program>
+    <Program id="+">	<!-- m. 10 -->
+      <PitchTrack>
+         <Patch>sustain1</Patch>
+         <Range>57</Range>
+         <NotesOff>all</NotesOff>
+      </PitchTrack>
+      <PitchTrack>
+         <Patch>sustain2</Patch>
+         <Range>60,64,68,71</Range>
+      </PitchTrack>
+    </Program>
+    <Program id="+">	<!-- m. 13 -->
+      <PitchTrack>
+         <Patch>follow1</Patch> <!-- hairpin1 -->
+         <Range>58,66,69</Range>
+         <NotesOff>all</NotesOff>
+         <!--<NotesOn>66,69</NotesOn> -->
+      </PitchTrack>
+      <!--<PitchTrack>
+         <Patch>arpeggio1</Patch>
+         <Range>58</Range>
+         <Coupling>2</Coupling>
+      </PitchTrack>-->
+      <PitchTrack>
+         <Patch>follow2</Patch>
+         <Range>62</Range>
+      </PitchTrack>
+    </Program>
+    <Program id="+">	<!-- m. 20 -->
+      <PitchTrack>
+         <Patch>hairpin2</Patch>
+         <Range>55,64,65,67,68</Range>
+         <NotesOff>all</NotesOff>
+         <NotesOn>55,64,65,67,68</NotesOn>
+      </PitchTrack>
+    </Program>
+    <Program id="+">	<!-- m. 28 -->
+      <PitchTrack>
+         <Patch>hairpin3</Patch>
+         <Range>58,62,66,69</Range>
+         <NotesOff>all</NotesOff>
+         <NotesOn>58,62,66,69</NotesOn>
+      </PitchTrack>
+    </Program>	
+    <Program id="+">	<!-- m. 34 -->
+      <PitchTrack>
+         <Patch>constant1</Patch>
+         <Range>55</Range>
+         <NotesOff>all</NotesOff>
+	     <NotesOn>55</NotesOn>
+      </PitchTrack>
+      <PitchTrack>
+         <Patch>sustain2</Patch>
+         <Range>58,66</Range>
+      </PitchTrack>
+	  <PitchTrack>
+	     <Patch>arpeggio1</Patch>
+		 <Range>57</Range>
+	  </PitchTrack>
+    </Program>	
+    <Program id="+">	<!-- m. 35 -->
+      <PitchTrack>
+         <NotesOff>55,58</NotesOff>
+      </PitchTrack>
+	  <PitchTrack>
+	     <Patch>follow2</Patch>
+		 <Range>63</Range>
+	  </PitchTrack>	  
+    </Program>		
+    <Program id="+">	<!-- m. 36 last beat -->
+      <PitchTrack>
+         <NotesOff>all</NotesOff>
+      </PitchTrack>
+    </Program>		
+    <Program id="+">	<!-- m. 39 -->
+      <PitchTrack>
+         <Patch>reverse1</Patch>
+         <Range>63,71</Range>
+         <NotesOff>all</NotesOff>
+      </PitchTrack>
+	  <PitchTrack>
+         <Patch>reverse1</Patch>
+         <Range>58</Range>
+         <Coupling>-10,-5,-1</Coupling>
+      </PitchTrack>
+    </Program>		
+    <Program id="+">	<!-- m. 42 -->
+      <PitchTrack>
+         <NotesOff>all</NotesOff>
+      </PitchTrack>
+    </Program>			
+	<Program id="+">	<!-- m. 45 last beat -->
+	  <PitchTrack>
+         <Patch>amponly2</Patch>
+         <Range>62</Range>
+		 <NotesOff>all</NotesOff>
+		 <NotesOn>62</NotesOn>
+      </PitchTrack>
+    </Program>	
+	<Program id="+">	<!-- m. 47 -->
+	  <PitchTrack>
+         <Patch>follow1</Patch>
+         <Range>61,64,66,69</Range>
+		 <NotesOff>all</NotesOff>
+      </PitchTrack>
+    </Program>			
+    <Program id="+">	<!-- m. 50 -->
+      <PitchTrack>
+         <Patch>hairpin1</Patch>
+         <Range>52,55,63,66</Range>
+         <NotesOff>all</NotesOff>
+         <NotesOn>52,55,63,66</NotesOn>
+      </PitchTrack>
+      <PitchTrack>
+         <Patch>sustain1</Patch>
+         <Range>49</Range>
+      </PitchTrack>
+	</Program>
+	<Program id="+">	<!-- m. 50 last beat -->
+      <PitchTrack>
+         <Patch>sustain2</Patch>
+         <Range>52,54,59,60,63</Range>
+      </PitchTrack>	  
+	</Program>
+	<Program id="+">	<!-- m. 52 last beat -->
+      <PitchTrack>
+         <Patch>sustain2</Patch>
+         <Range>48,52</Range>
+		 <NotesOff>all</NotesOff>
+      </PitchTrack>	  
+	</Program>	
+    <Program id="+">	<!-- m. 55 -->
+      <PitchTrack>
+         <Patch>constant2</Patch>
+         <Range>53,57,59,62</Range>
+         <NotesOff>all</NotesOff>
+      </PitchTrack>
+    </Program>		
+    <Program id="+">	<!-- m. 59 -->
+      <PitchTrack>
+         <NotesOff>all</NotesOff>
+      </PitchTrack>
+    </Program>	
+    <Program id="+">	<!-- m. 60 -->
+      <PitchTrack>
+         <Patch>sustain2</Patch>
+         <Range>56,59,64,67</Range>
+      </PitchTrack>
+    </Program>		
+    <Program id="+">	<!-- m. 61 -->
+      <PitchTrack>
+         <Patch>hairpin1</Patch>
+         <Range>60,62,66,71</Range>
+         <NotesOff>all</NotesOff>
+         <NotesOn>60,62,66,71</NotesOn>
+      </PitchTrack>
+      <PitchTrack>
+         <Patch>sustain2</Patch>
+         <Range>51,56</Range>
+      </PitchTrack>	  	  
+	</Program>
+    <Program id="+">	<!-- m. 63 -->
+	  <PitchTrack>
+         <Patch>amponly2</Patch>
+         <Range>53</Range>
+         <Coupling>3,6,11</Coupling>
+		 <NotesOff>all</NotesOff>
+		 <NotesOn>53</NotesOn>
+      </PitchTrack>
+    </Program>	
+    <Program id="+">	<!-- m. 64 -->
+      <PitchTrack>
+         <Patch>constant3</Patch>
+         <Range>56,59,64</Range>
+         <NotesOff>all</NotesOff>
+		 <NotesOn>56,59,64</NotesOn>
+      </PitchTrack>
+    </Program>		
+    <Program id="+">	<!-- m. 68 -->
+      <PitchTrack>
+         <Patch>hairpin-and-octave</Patch>
+         <Range>52,57,62</Range>
+         <NotesOff>all</NotesOff>
+         <NotesOn>52,57,62</NotesOn>
+      </PitchTrack>
+      <PitchTrack>
+        <Patch>follow2</Patch>
+        <Range>68,73,79,80</Range>
+      </PitchTrack>	  
+    </Program>		
+    <Program id="+">	<!-- m. 71 last beat -->	
+      <PitchTrack>
+        <Patch>arpeggio1</Patch>
+        <Range>50,57,60,68</Range>
+		<NotesOff>all</NotesOff>
+      </PitchTrack>	  
+    </Program>			
+    <Program id="+">	<!-- m. 74 -->	
+      <PitchTrack>
+        <Patch>arpeggio1</Patch>
+        <Range>52,58</Range>
+		<NotesOff>all</NotesOff>
+      </PitchTrack>	  
+    </Program>		
+    <Program id="+">	<!-- m. 77 -->	
+      <PitchTrack>
+        <Patch>sustain4</Patch>
+        <Range>57,60,63,66,68,71</Range>
+		<NotesOff>all</NotesOff>
+      </PitchTrack>	  
+    </Program>							
+    <Program id="+">	<!-- m. 78 second half -->
+      <PitchTrack>
+         <NotesOff>all</NotesOff>
+      </PitchTrack>
+    </Program>
+    <Program id="+">	<!-- m. 80 -->	
+      <PitchTrack>
+        <Patch>sustain4</Patch>
+        <Range>50,54,56,58,59</Range>
+      </PitchTrack>	  
+    </Program>			
+    <Program id="+">	<!-- m. 81 third beat -->	
+      <PitchTrack>
+        <Patch>sustain3</Patch>
+        <Range>61,67,70,72,74</Range>
+		<NotesOn>70</NotesOn>
+		<NotesOff>all</NotesOff>
+      </PitchTrack>	  
+    </Program>			
+    <Program id="+">	<!-- m. 82 second half -->
+      <PitchTrack>
+         <NotesOff>all</NotesOff>
+      </PitchTrack>
+    </Program>
+    <Program id="+">	<!-- m. 83 second half -->	
+      <PitchTrack>
+        <Patch>sustain3</Patch>
+        <Range>49,59,66,68</Range>
+      </PitchTrack>	  
+    </Program>		
+    <Program id="+">	<!-- m. 85 -->
+      <PitchTrack>
+         <NotesOff>all</NotesOff>
+      </PitchTrack>
+    </Program>	
+    <Program id="+">	<!-- m. 86 second half -->	
+      <PitchTrack>
+        <Patch>flautando1</Patch>
+        <Range>61,64,67,73,79,83</Range>
+		<NotesOff>all</NotesOff>
+      </PitchTrack>	  
+    </Program>	
+    <Program id="+">	<!-- m. 90 -->	
+      <PitchTrack>
+        <Patch>flautando1</Patch>
+        <Range>50,57,64,65,72</Range>
+		<NotesOn>50</NotesOn>
+		<NotesOff>all</NotesOff>
+      </PitchTrack>	  
+    </Program>	
+    <Program id="+">	<!-- m. 92 -->	
+      <PitchTrack>
+        <Patch>sustain4</Patch>
+        <Range>48,51,55,59</Range>
+		<NotesOff>all</NotesOff>		
+      </PitchTrack>	  
+    </Program>	
+    <Program id="+">	<!-- m. 96 -->	
+      <PitchTrack>
+        <Patch>follow2</Patch>
+        <Range>57,76</Range>
+		<NotesOff>all</NotesOff>		
+      </PitchTrack>	  
+    </Program>		
+    <Program id="+">	<!-- m. 98 -->
+	  <PitchTrack>
+         <Patch>reverse2</Patch>
+         <Range>66,79</Range>
+         <Coupling>-8,-3</Coupling>
+		 <NotesOff>all</NotesOff>	
+      </PitchTrack>
+    </Program>		
+    <Program id="+">	<!-- m. 103 -->
+	  <PitchTrack>
+         <Patch>reverse2</Patch>
+         <Range>64</Range>
+         <Coupling>-10,-5,-2</Coupling>
+		 <NotesOff>all</NotesOff>	
+      </PitchTrack>
+	  <PitchTrack>
+         <Patch>reverse2</Patch>
+         <Range>73</Range>
+         <Coupling>-3</Coupling>	
+      </PitchTrack>	  
+	  <PitchTrack>
+         <Patch>constant1</Patch>
+         <Range>57</Range>	
+      </PitchTrack>	 	  
+    </Program>			
+    <Program id="+">	<!-- m. 106 -->
+	  <PitchTrack>
+         <Patch>reverse2-light</Patch>
+         <Range>57</Range>
+         <Coupling>-1,6,8</Coupling>
+		 <NotesOff>all</NotesOff>	
+      </PitchTrack>
+    </Program>	
+    <Program id="+">	<!-- m. 107 -->
+	  <PitchTrack>
+         <Patch>reverse2</Patch>
+         <Range>72</Range>
+         <Coupling>-6,-1</Coupling>
+		 <NotesOff>all</NotesOff>	
+      </PitchTrack>
+    </Program>						
+    <Program id="+">	<!-- m. 109 -->
+	  <PitchTrack>
+         <Patch>reverse-follow</Patch>
+         <Range>68</Range>
+         <Coupling>-9,-8</Coupling>
+		 <NotesOff>all</NotesOff>	
+      </PitchTrack>
+    </Program>						
+    <Program id="+">	<!-- m. 110 middle -->
+	  <PitchTrack>
+         <Patch>reverse2-light</Patch>
+         <Range>68</Range>
+         <Coupling>-10,-6,-1</Coupling>
+		 <NotesOff>all</NotesOff>	
+      </PitchTrack>
+    </Program>		
+    <Program id="+">	<!-- m. 113 -->
+	  <PitchTrack>
+         <Patch>reverse2</Patch>
+         <Range>83</Range>
+         <Coupling>2,7</Coupling>
+		 <NotesOff>all</NotesOff>	
+      </PitchTrack>
+	  <PitchTrack>
+         <Patch>reverse2</Patch>
+         <Range>66</Range>
+         <Coupling>-2</Coupling>
+      </PitchTrack>	  
+    </Program>		
+    <Program id="+">	<!-- m. 115 -->	
+      <PitchTrack>
+        <Patch>sustain2</Patch>
+        <Range>56,58,59,61,62,64,65</Range>
+		<NotesOff>all</NotesOff>
+      </PitchTrack>	  
+    </Program>	
+    <Program id="+">	<!-- m. 116 second half -->
+	  <PitchTrack>
+         <Patch>reverse-follow</Patch>
+         <Range>79</Range>
+         <Coupling>-6,-2</Coupling>
+		 <NotesOff>all</NotesOff>	
+      </PitchTrack>
+      <PitchTrack>
+        <Patch>sustain1</Patch>
+        <Range>56</Range>
+      </PitchTrack>	  	  
+    </Program>	
+	<Program id="+">	<!-- m. 119 second beat -->
+	  <PitchTrack>
+         <Patch>follow1</Patch>
+         <Range>58</Range>
+		 <NotesOff>all</NotesOff>
+      </PitchTrack>
+	  <PitchTrack>
+         <Patch>reverse2</Patch>
+         <Range>64</Range>
+      </PitchTrack>
+	  <PitchTrack>
+         <Patch>reverse2</Patch>
+         <Range>74</Range>
+         <Coupling>3,7</Coupling>
+      </PitchTrack>	 	  	  	 	  
+    </Program>	
+    <Program id="+">	<!-- m. 121 -->	
+      <PitchTrack>
+        <Patch>sustain1</Patch>
+        <Range>55,56,58,60,62,64</Range>
+		<NotesOff>all</NotesOff>
+      </PitchTrack>	  
+    </Program>	
+    <Program id="+">	<!-- m. 123 middle -->	
+      <PitchTrack>
+        <Patch>sustain3</Patch>
+        <Range>49,57,65,72</Range>
+		<NotesOff>all</NotesOff>
+      </PitchTrack>	  
+    </Program>		
+    <Program id="+">	<!-- m. 125 second beat -->	
+      <PitchTrack>
+        <Patch>hairpin4</Patch>
+        <Range>49,57,65,72</Range>
+		<NotesOn>49,57,65,72</NotesOn>
+      </PitchTrack>	  
+    </Program>			
+    <Program id="+">	<!-- m. 127 -->	
+      <PitchTrack>
+        <Patch>sustain2-gliss</Patch>
+        <Range>57,59,60,62,64,66,67</Range>
+		<NotesOn>57,59,60,62,64,66,67</NotesOn>
+		<NotesOff>all</NotesOff>
+      </PitchTrack>	  
+    </Program>	
+    <Program id="+">	<!-- m. 128 -->	
+      <PitchTrack>
+         <NotesOff>all</NotesOff>
+      </PitchTrack>
+    </Program>	
+    <Program id="+">	<!-- m. 130 -->	
+      <PitchTrack>
+        <Patch>amponly1</Patch>
+        <Range>66,68,69,71,73,75,77</Range>
+		<NotesOn>66,68,69,71,<!--73,75,77--></NotesOn>
+      </PitchTrack>	  
+    </Program>	
+    <Program id="+">	<!-- m. 131 last beat -->	
+      <PitchTrack>
+        <Patch>amponly1</Patch>
+        <Range>66,69,72,76,79</Range>
+		<NotesOff>all</NotesOff>
+		<NotesOn>66,69,72,76,79</NotesOn>
+      </PitchTrack>	  
+    </Program>	
+    <Program id="+">	<!-- m. 134 -->	
+      <PitchTrack>
+        <Patch>sustain3</Patch>
+        <Range>48,54,57,59</Range>
+		<NotesOn>48,54,57,59</NotesOn>
+		<NotesOff>all</NotesOff>		
+      </PitchTrack>	  
+    </Program>	
+    <Program id="+">	<!-- m. 135 -->	
+      <PitchTrack>
+         <NotesOff>all</NotesOff>
+      </PitchTrack>
+    </Program>		
+    <Program id="+">	<!-- m. 137 -->	
+      <PitchTrack>
+        <Patch>flautando1</Patch>
+        <Range>72,75,76,80</Range>
+		<NotesOn>72,75,76,80</NotesOn>
+      </PitchTrack>	  
+    </Program>	
+    <Program id="+">	<!-- m. 138 -->	
+      <PitchTrack>
+        <Patch>flautando1</Patch>
+        <Range>62,63,68</Range>
+		<NotesOn>62,63,68</NotesOn>
+      </PitchTrack>	  
+    </Program>
+    <Program id="+">	<!-- m. 140 -->	
+      <PitchTrack>
+        <Patch>flautando1</Patch>
+        <Range>50,60</Range>
+		<NotesOn>50,60</NotesOn>
+		<NotesOff>all</NotesOff>
+      </PitchTrack>	  
+    </Program>			
+    <Program id="+">	<!-- m. 141 -->	
+      <PitchTrack>
+        <Patch>flautando1</Patch>
+        <Range>50,53,57,60</Range>
+		<NotesOn>50,53,57,60</NotesOn>
+      </PitchTrack>	  
+    </Program>		
+    <Program id="+">	<!-- m. 142 -->	
+      <PitchTrack>
+        <Patch>flautando1</Patch>
+        <Range>50,53,55,57,59,60</Range>
+		<NotesOn>50,53,55,57,59,60</NotesOn>		
+      </PitchTrack>	  
+    </Program>			
+    <Program id="+">	<!-- m. 143 -->
+      <PitchTrack>
+        <Patch>arpeggio1</Patch>
+        <Range>50,53,57,60,64,67,71,74,78,81,85,88</Range>
+      </PitchTrack>
+    </Program>	
+    <Program id="+">	<!-- m. 145 -->	
+      <PitchTrack>
+         <NotesOff>all</NotesOff>
+      </PitchTrack>
+    </Program>	
+    <Program id="+">	<!-- m. 146 second beat -->
+      <PitchTrack>
+         <Patch>constant2</Patch>
+         <Range>66</Range>
+      </PitchTrack>
+    </Program>
+    <Program id="+">	<!-- m. 153 -->
+      <PitchTrack>
+         <Patch>sustain1</Patch>
+         <Range>66,69,73,76,79</Range>
+		 <NotesOff>all</NotesOff>
+      </PitchTrack>
+    </Program>	
+    <Program id="+">	<!-- m. 158 -->
+      <PitchTrack>
+         <Patch>constant1</Patch>
+         <Range>66,69,73,76,79</Range>
+		 <NotesOn>66,69,73,76,79</NotesOn>
+      </PitchTrack>
+    </Program>	
+    <Program id="+">	<!-- m. 160 -->
+      <PitchTrack>
+         <Patch>constant1</Patch>
+         <Range>54,57</Range>
+		 <NotesOff>all</NotesOff>
+		 <NotesOn>54</NotesOn>
+      </PitchTrack>
+      <PitchTrack>
+         <Patch>sustain2</Patch>
+         <Range>61,64,68,71</Range>
+		 <!--<Coupling>12</Coupling>-->
+      </PitchTrack>	  
+    </Program>	
+    <Program id="+">	<!-- m. 165 -->	
+      <PitchTrack>
+         <NotesOff>all</NotesOff>
+      </PitchTrack>
+    </Program>			
+    <Program id="+">	<!-- m. 166 second beat -->
+      <PitchTrack>
+         <Patch>amponly1</Patch>
+         <Range>54,60,67,71,72,79,83</Range>
+		 <NotesOn>54,60,67,71,72,79,83</NotesOn>
+      </PitchTrack>
+    </Program>			
+    <Program id="+">	<!-- m. 167 -->	
+      <PitchTrack>
+        <Patch>sustain2</Patch>
+        <Range>58,65</Range>	  
+		<NotesOff>all</NotesOff>
+      </PitchTrack>
+    </Program>	
+    <Program id="+">	<!-- m. 168 second half -->	
+      <PitchTrack>
+        <Patch>sustain2</Patch>
+        <Range>51,55,59,62,65,69,72</Range>	  
+      </PitchTrack>
+    </Program>	
+    <Program id="+">	<!-- m. 170 -->	
+      <PitchTrack>
+         <NotesOff>all</NotesOff>
+      </PitchTrack>
+    </Program>	
+    <Program id="+">	<!-- m. 171 -->	
+      <PitchTrack>
+        <Patch>sustain2</Patch>
+        <Range>69,72,76,79,83</Range>	
+		<NotesOn>69,72,76,79,83</NotesOn>  
+      </PitchTrack>
+      <PitchTrack>
+        <Patch>sustain4</Patch>
+        <Range>65</Range>	  
+      </PitchTrack>	  
+    </Program>			
+    <Program id="+">	<!-- m. 173 -->	
+      <PitchTrack>
+        <Patch>follow2</Patch>
+        <Range>83</Range>	
+		<NotesOff>all</NotesOff>
+      </PitchTrack>
+    </Program>				
+    <Program id="+">	<!-- m. 175 -->	
+      <PitchTrack>
+        <Patch>sustain3</Patch>
+        <Range>62,67,72,78</Range>	  
+		<NotesOn>62,67,72,78</NotesOn>	
+      </PitchTrack>
+    </Program>								
+    <Program id="+">	<!-- m. 176 second half -->	
+      <PitchTrack>
+         <NotesOff>all</NotesOff>
+      </PitchTrack>
+    </Program>	
+    <Program id="+">	<!-- m. 178 second half -->	
+      <PitchTrack>
+        <Patch>sustain3</Patch>
+        <Range>66,72,75,77,80</Range>	  
+		<NotesOn>66,72,75,77,80</NotesOn>	  
+      </PitchTrack>
+    </Program>	
+    <Program id="+">	<!-- m. 181 -->	
+      <PitchTrack>
+        <Patch>harmonic-gliss</Patch>
+        <Range>50,53,55,57,61</Range>	
+		<NotesOff>all</NotesOff>
+		<NotesOn>50,53,55,57,61</NotesOn>
+      </PitchTrack>
+    </Program>		
+    <Program id="+">	<!-- m. 184 -->	
+      <PitchTrack>
+        <Patch>harmonic-gliss</Patch>
+        <Range>49,52,54,56,59</Range>	
+		<NotesOff>all</NotesOff>
+		<NotesOn>49,52,54,56,59</NotesOn>
+      </PitchTrack>
+    </Program>	
+    <Program id="+">	<!-- m. 186 -->	
+      <PitchTrack>
+        <Patch>harmonic-gliss2</Patch>
+        <Range>48,51,53,57,58</Range>	
+		<NotesOff>all</NotesOff>
+		<NotesOn>48,51,53,57,58</NotesOn>
+      </PitchTrack>
+    </Program>				
+    <Program id="+">	<!-- m. 190 -->	
+      <PitchTrack>
+         <NotesOff>all</NotesOff>
+      </PitchTrack>
+    </Program>					
+    <Program id="+">	<!-- m. 191 -->	
+      <PitchTrack>
+        <Patch>reverse1</Patch>
+        <Range>48-84</Range>	  
+      </PitchTrack>
+    </Program>	
+    <Program id="+">	<!-- m. 198 -->	
+      <PitchTrack>
+         <NotesOff>all</NotesOff>
+      </PitchTrack>
+    </Program>			
+    <Program id="+">	<!-- m. 205 -->
+      <PitchTrack>
+         <Patch>follow2</Patch>
+         <Range>48,60</Range>
+      </PitchTrack>
+      <PitchTrack>
+         <Patch>reverse1</Patch>
+         <Range>79</Range>
+		 <Coupling>-11,-7,-4</Coupling>
+      </PitchTrack>
+      <PitchTrack>
+         <Patch>reverse1</Patch>
+         <Range>65</Range>
+		 <Coupling>-5,-1</Coupling>
+      </PitchTrack>	  	  	  
+      <PitchTrack>
+         <Patch>reverse1</Patch>
+         <Range>58</Range>
+		 <Coupling>-10,-5,-1</Coupling>
+      </PitchTrack>	  	  
+    </Program>
+    <Program id="+">	<!-- m. 208 last beat -->
+      <PitchTrack>
+         <Patch>constant3</Patch>
+         <Range>48,53,57,58</Range>
+		 <NotesOff>all</NotesOff>
+		 <NotesOn>48,53,57,58</NotesOn>
+      </PitchTrack>	  	  
+    </Program>	
+    <Program id="+">	<!-- m. 212 -->	
+      <PitchTrack>
+        <NotesOff>all</NotesOff>  
+      </PitchTrack>
+    </Program>		
+    <Program id="+">	<!-- m. 214 -->	
+      <PitchTrack>
+        <Patch>flautando1</Patch>
+		<Range>65,69,73,76,80,83</Range>
+		<NotesOn>65,69,73,76,80,83</NotesOn>
+      </PitchTrack>
+    </Program>			
+    <Program id="+">	<!-- m. 216 -->	
+      <PitchTrack>
+        <NotesOff>all</NotesOff>  
+      </PitchTrack>
+    </Program>	
+    <Program id="+">	<!-- m. 218 -->	
+      <PitchTrack>
+        <Patch>flautando1</Patch>
+		<Range>65,69,73,76,80,83,87,90,97</Range>
+		<NotesOn>65,69,73,76,80,83,87,90,97</NotesOn>
+      </PitchTrack>
+    </Program>					
+    <Program id="+">	<!-- m. 221 -->	
+      <PitchTrack>
+         <NotesOff>all</NotesOff>
+      </PitchTrack>
+    </Program>
+  </PatchTable>
+
+  <StringMap>
+    <Map note="84-95" string="72-83"/>
+    <Map note="96-107" string="72-83"/>
+    <Map note="93-95" string="75-77"/>
+  </StringMap>
+
+  <PitchTrackSettings>
+    <TriggerTotalSamples>3</TriggerTotalSamples>
+    <TriggerPositiveSamples>2</TriggerPositiveSamples>
+    <PitchTolerance>0.6</PitchTolerance>
+    <AmplitudeThreshold>0.001</AmplitudeThreshold>
+  </PitchTrackSettings>
+  
+  <GlobalControls>
+    <Control name="MasterVolume" id="72"/>
+	<Control name="PitchTrackInputMute" id="20" threshold="8"/>
+  </GlobalControls>
+  <!--<GlobalControls>
+    <Control name="MasterVolume" id="19"/>
+    <Control name="PitchTrackInputMute" id="18" threshold="8"/>
+  </GlobalControls>  -->
+</PatchTableRoot>
